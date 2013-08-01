@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[CRESCENDO]]></title>
   <subtitle><![CDATA[花开堪折直须折 | gather ye rosebuds while ye may]]></subtitle>
-  <link href="http://blog.shujian.me//atom.xml" rel="self"/>
-  <link href="http://blog.shujian.me/"/>
-  <updated>2013-08-01T09:39:36.741Z</updated>
-  <id>http://blog.shujian.me//</id>
+  <link href="http://blog.shujian.me/atom.xml" rel="self"/>
+  <link href="http://blog.shujian.me"/>
+  <updated>2013-08-01T09:40:21.452Z</updated>
+  <id>http://blog.shujian.me/</id>
   <author>
     <name><![CDATA[Shukri Chiu]]></name>
     <email><![CDATA[zsj.jacob@gmail.com]]></email>
@@ -13,8 +13,8 @@
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
   <entry>
     <title type="html"><![CDATA[Behance -- 创意人士高效工作十法则]]></title>
-    <link href="http://blog.shujian.me//2013/07/22/behance/"/>
-    <id>http://blog.shujian.me//2013/07/22/behance/</id>
+    <link href="http://blog.shujian.me/2013/07/22/behance/"/>
+    <id>http://blog.shujian.me/2013/07/22/behance/</id>
     <published>2013-07-21T16:00:00.000Z</published>
     <updated>2013-08-01T05:07:56.041Z</updated>
     <content type="html"><![CDATA[<h3>1.避免犹豫迟疑 Break the seal of hesitation</h3>
@@ -42,13 +42,13 @@
 <h3>10.记住一条规律：所有法则在必要时都可以被打破 Remember that rules - even productivity rules - are made to be broken.</h3>
 <p>我们之前提到过要制定一个时间表。对于这点和其他的一些方法，只有当真正有成效，才需要执行。如果当下一步进程与你初定的时间计划不一致的时候，你就需要重新再定一个。就好比长途旅行，你总会不时蹦出一些想法，一会逛逛博物馆，一会走走街区，又或是和陌生人聊天，要确保偶尔更新一下自己的时间计划。打破常规，会带给我们新的希望，也会帮助我们很好的保持精力而避免烦躁。</p>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/Behance/" term="Behance"/>
-    <category scheme="http://blog.shujian.me//tags/creative/" term="creative"/>
+    <category scheme="http://blog.shujian.me/tags/Behance/" term="Behance"/>
+    <category scheme="http://blog.shujian.me/tags/creative/" term="creative"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[是厌恶]]></title>
-    <link href="http://blog.shujian.me//2013/06/26/annoyer/"/>
-    <id>http://blog.shujian.me//2013/06/26/annoyer/</id>
+    <link href="http://blog.shujian.me/2013/06/26/annoyer/"/>
+    <id>http://blog.shujian.me/2013/06/26/annoyer/</id>
     <published>2013-06-25T16:00:00.000Z</published>
     <updated>2013-08-01T05:26:29.687Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -69,12 +69,12 @@
 <p>我能够回答  </p>
 <p>&quot;是厌恶&quot;</p>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/life/" term="life"/>
+    <category scheme="http://blog.shujian.me/tags/life/" term="life"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[wwdc后记]]></title>
-    <link href="http://blog.shujian.me//2013/06/11/talk-about-wwdc/"/>
-    <id>http://blog.shujian.me//2013/06/11/talk-about-wwdc/</id>
+    <link href="http://blog.shujian.me/2013/06/11/talk-about-wwdc/"/>
+    <id>http://blog.shujian.me/2013/06/11/talk-about-wwdc/</id>
     <published>2013-06-10T16:00:00.000Z</published>
     <updated>2013-08-01T05:25:02.115Z</updated>
     <content type="html"><![CDATA[<p>APPLE的战略非常正确，从硬体公司到软体公司的改变是非常必要的（反观NOKIA，也做软体，但是骨子里还是硬体公司).<br>整个发布会也是亮点多多：</p>
@@ -86,15 +86,15 @@
 <li>最后在赞一个john ive,这flat design的功力比微软不知道强到哪里去了。。。  看过wp8原版界面就知道丑的啥样了，ios只是一个接受的时间问题，就像ios6一样，最终最少90%的用户都会升级，就算不升级，p大出个ios7 perfect jail breaking包。。然后都升了。。</li>
 </ol>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/apple/" term="apple"/>
-    <category scheme="http://blog.shujian.me//tags/wwdc/" term="wwdc"/>
-    <category scheme="http://blog.shujian.me//tags/Mac-OS-X/" term="Mac OS X"/>
-    <category scheme="http://blog.shujian.me//tags/IOS/" term="IOS"/>
+    <category scheme="http://blog.shujian.me/tags/apple/" term="apple"/>
+    <category scheme="http://blog.shujian.me/tags/wwdc/" term="wwdc"/>
+    <category scheme="http://blog.shujian.me/tags/Mac-OS-X/" term="Mac OS X"/>
+    <category scheme="http://blog.shujian.me/tags/IOS/" term="IOS"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[趁复习备考之际记录一些关于C语言进程通信的东东]]></title>
-    <link href="http://blog.shujian.me//2013/06/08/something-about-process-comunication-in-c/"/>
-    <id>http://blog.shujian.me//2013/06/08/something-about-process-comunication-in-c/</id>
+    <link href="http://blog.shujian.me/2013/06/08/something-about-process-comunication-in-c/"/>
+    <id>http://blog.shujian.me/2013/06/08/something-about-process-comunication-in-c/</id>
     <published>2013-06-07T16:00:00.000Z</published>
     <updated>2013-08-01T05:25:19.799Z</updated>
     <content type="html"><![CDATA[<p>过两天就要考linux了啦,所以这几天在集中精力复习linux,其实课程讲的比较简单,PPT前几章都没什么好玩的,就最后3章开始介绍文件系统和进程通信的时候才有大量编程的部分,当然这才是最有意思的部分.</p>
@@ -820,15 +820,15 @@ have fun !
 <p>程序运行结果如下:
 <img src="http://sergio-blog.qiniudn.com/ipc_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/c-1/" term="c"/>
-    <category scheme="http://blog.shujian.me//tags/IPC/" term="IPC"/>
-    <category scheme="http://blog.shujian.me//tags/Process-Comunication/" term="Process Comunication"/>
-    <category scheme="http://blog.shujian.me//tags/linux/" term="linux"/>
+    <category scheme="http://blog.shujian.me/tags/c-1/" term="c"/>
+    <category scheme="http://blog.shujian.me/tags/IPC/" term="IPC"/>
+    <category scheme="http://blog.shujian.me/tags/Process-Comunication/" term="Process Comunication"/>
+    <category scheme="http://blog.shujian.me/tags/linux/" term="linux"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[聊聊我的Jekyll Blog是如何建立的]]></title>
-    <link href="http://blog.shujian.me//2013/06/06/talk-about-myblog/"/>
-    <id>http://blog.shujian.me//2013/06/06/talk-about-myblog/</id>
+    <link href="http://blog.shujian.me/2013/06/06/talk-about-myblog/"/>
+    <id>http://blog.shujian.me/2013/06/06/talk-about-myblog/</id>
     <published>2013-06-05T16:00:00.000Z</published>
     <updated>2013-08-01T05:25:09.051Z</updated>
     <content type="html"><![CDATA[<p>在网上写Blog也有快2年时间了,中间换过不少的产品,从早期的QQ空间,到后来的Wordpress,再到现在开始使用Jekyll并逐渐稳定下来。Jekyll是一个非常简洁的Blog静态页面生成器(Static Site Generators),采用<code>Git</code>管理和用<code>Markdown</code>进行写作并且能够通过<code>Github Pages</code>免费快速部署的特性让其变得流行,当然在这里我并不打算讲解一些Jekyll的原理,也不会讲解一些Jekyll的入门,这些介绍在网上实在太多太多了,比如:</p>
@@ -858,16 +858,16 @@ have fun !
 <h2>further developing</h2>
 <p>Jeykll最致命的问题在于没有很好的搜索功能,不过网上已经有篇帖子说如何做<a href="http://justjavac.com/jekyll/2012/03/04/static-search-article-on-jekyll.html">静态搜索</a>,这也是我最近一段时间想要完成的。</p>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/jekyll/" term="jekyll"/>
-    <category scheme="http://blog.shujian.me//tags/blog/" term="blog"/>
-    <category scheme="http://blog.shujian.me//tags/woopra/" term="woopra"/>
-    <category scheme="http://blog.shujian.me//tags/incapsula/" term="incapsula"/>
-    <category scheme="http://blog.shujian.me//tags/github-page/" term="github page"/>
+    <category scheme="http://blog.shujian.me/tags/jekyll/" term="jekyll"/>
+    <category scheme="http://blog.shujian.me/tags/blog/" term="blog"/>
+    <category scheme="http://blog.shujian.me/tags/woopra/" term="woopra"/>
+    <category scheme="http://blog.shujian.me/tags/incapsula/" term="incapsula"/>
+    <category scheme="http://blog.shujian.me/tags/github-page/" term="github page"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[ruby2.0+rails4.0环境配置]]></title>
-    <link href="http://blog.shujian.me//2013/06/04/rails4/"/>
-    <id>http://blog.shujian.me//2013/06/04/rails4/</id>
+    <link href="http://blog.shujian.me/2013/06/04/rails4/"/>
+    <id>http://blog.shujian.me/2013/06/04/rails4/</id>
     <published>2013-06-03T16:00:00.000Z</published>
     <updated>2013-08-01T05:25:24.495Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -967,13 +967,13 @@ $ source ~/.bash_profile
 </ul>
 <p><img src="http://sergio-blog.qiniudn.com/ror.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/ruby/" term="ruby"/>
-    <category scheme="http://blog.shujian.me//tags/rails/" term="rails"/>
+    <category scheme="http://blog.shujian.me/tags/ruby/" term="ruby"/>
+    <category scheme="http://blog.shujian.me/tags/rails/" term="rails"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[妙峰山下]]></title>
-    <link href="http://blog.shujian.me//2013/01/28/miaofengshan/"/>
-    <id>http://blog.shujian.me//2013/01/28/miaofengshan/</id>
+    <link href="http://blog.shujian.me/2013/01/28/miaofengshan/"/>
+    <id>http://blog.shujian.me/2013/01/28/miaofengshan/</id>
     <published>2013-01-27T16:00:00.000Z</published>
     <updated>2013-08-01T05:25:30.035Z</updated>
     <content type="html"><![CDATA[<p>壬辰龙年，腊月十七，北京妙峰山下，晴，大雾。缘由心生，缘起缘落，世间事大都绕不过一个“缘”字。</p>
@@ -983,15 +983,15 @@ $ source ~/.bash_profile
 上课的班级是小班，其中还是有些认识的人，除了室友还有个长沙GRE同班的湖大小女生，或许在她眼里我才是小= =。北京的妹子当然的是个各种高大，也见过了不少白富美，当然大部分都是hard to get，我们班上的平均水平比我想象中差点，不过还是有亮点，每天我还打算以抹茶味百醇打头，以我有次忘带写作书借了妹子一本书爲契机，以“A Lannister always pays his debts”爲藉口神搭讪一次。可能比较悲剧的是，Imp可能就是我以后的发展目标了，还好我不是很排斥用给钱的方式打猎，那麽我只需要有足够的钱我就能体验各种类型的猎物，可惜这只是找不到真爱无奈的一种发泄消磨时光的方式。</p>
 <p>人事物都是缘，碰到了，就靜靜的去感受。</p>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/北京/" term="北京"/>
-    <category scheme="http://blog.shujian.me//tags/新東方/" term="新東方"/>
-    <category scheme="http://blog.shujian.me//tags/妙峰山/" term="妙峰山"/>
-    <category scheme="http://blog.shujian.me//tags/GRE/" term="GRE"/>
+    <category scheme="http://blog.shujian.me/tags/北京/" term="北京"/>
+    <category scheme="http://blog.shujian.me/tags/新東方/" term="新東方"/>
+    <category scheme="http://blog.shujian.me/tags/妙峰山/" term="妙峰山"/>
+    <category scheme="http://blog.shujian.me/tags/GRE/" term="GRE"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[北京之旅]]></title>
-    <link href="http://blog.shujian.me//2013/01/24/welcome-to-beijing/"/>
-    <id>http://blog.shujian.me//2013/01/24/welcome-to-beijing/</id>
+    <link href="http://blog.shujian.me/2013/01/24/welcome-to-beijing/"/>
+    <id>http://blog.shujian.me/2013/01/24/welcome-to-beijing/</id>
     <published>2013-01-23T16:00:00.000Z</published>
     <updated>2013-08-01T04:53:16.259Z</updated>
     <content type="html"><![CDATA[<h2>起</h2>
@@ -1004,14 +1004,14 @@ $ source ~/.bash_profile
 <h2>合</h2>
 <p>不管怎样，人生如棋，落子无悔。我选择了自己的道路，就应该坚定顽强的走下去，我也不知道我的未来会发生些什么，毕竟,相遇就是缘。</p>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/北京/" term="北京"/>
-    <category scheme="http://blog.shujian.me//tags/新东方/" term="新东方"/>
-    <category scheme="http://blog.shujian.me//tags/缘护天下/" term="缘护天下"/>
+    <category scheme="http://blog.shujian.me/tags/北京/" term="北京"/>
+    <category scheme="http://blog.shujian.me/tags/新东方/" term="新东方"/>
+    <category scheme="http://blog.shujian.me/tags/缘护天下/" term="缘护天下"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[基于webrtc构建跨平台视频聊天室的阶段研究]]></title>
-    <link href="http://blog.shujian.me//2012/12/18/webrtc/"/>
-    <id>http://blog.shujian.me//2012/12/18/webrtc/</id>
+    <link href="http://blog.shujian.me/2012/12/18/webrtc/"/>
+    <id>http://blog.shujian.me/2012/12/18/webrtc/</id>
     <published>2012-12-18T00:00:00.000Z</published>
     <updated>2013-08-01T05:24:54.451Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -1036,14 +1036,46 @@ $ source ~/.bash_profile
 <li><a href="http://www.programmer.com.cn/4239/">VP8的前途与使命</a></li>
 </ul>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/webrtc/" term="webrtc"/>
-    <category scheme="http://blog.shujian.me//tags/websocket/" term="websocket"/>
-    <category scheme="http://blog.shujian.me//tags/nodejs/" term="nodejs"/>
+    <category scheme="http://blog.shujian.me/tags/webrtc/" term="webrtc"/>
+    <category scheme="http://blog.shujian.me/tags/websocket/" term="websocket"/>
+    <category scheme="http://blog.shujian.me/tags/nodejs/" term="nodejs"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[动态规划在unix diff的下的使用]]></title>
+    <link href="http://blog.shujian.me/2012/11/21/dp-in-unix-diff/"/>
+    <id>http://blog.shujian.me/2012/11/21/dp-in-unix-diff/</id>
+    <published>2012-11-21T00:00:00.000Z</published>
+    <updated>2013-08-01T05:26:01.931Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>In computing, diff is a file comparison utility that outputs the differences between two files. It is typically used to show the changes between one version of a file and a former version of the same file. Diff displays the changes made per line for text files.</p>
+</blockquote>
+<h2>简介</h2>
+<p>通常情况下diff和patch一起使用，linux中的源代码补丁都是通过diff和patch的配合制作出来的。diff在比较两个文本文件的不同方面很高效，它是基于行的，diff会将两个文件都按照行分成若干部分，然后计算这些行每一行的校验码（最原始的做法是把每一行当成一个字符，但是空间复杂度会比较大，现在的做法是把每一行文本通过hash算法产生一个值，那么文本行的比较就变成了比较hash值，还用一个bit位贮存中间结果，把空间占有率减少到传统做法的1/8，但是算法时间复杂度依然是O(m*n)，没有决定性的提高），之后的问题就是比较这两个文件的所有行的校验码序列的不同了，这就把问题归结为了序列比对（or LCS）的问题。diff用的是动态规划算法，动态规划和贪心算法相似，但是其思想却是相反的，贪心算法保证每一步都是最小代价的，但是不能保证最终代价最小，而动态规划每一步什么也不知道，它从起点开始，只管局部地按照要求将无所谓的结果铺满全局，然后回溯，在这些繁复的数据之间找到一条从开始到最后的一条路径，为何这条路径就是结果呢？因为每一步都符合要求，所以无论如何最终随便一条按照要求的回溯路线都符合要求，可是可以看出，这条回溯路线的结果是一个正确结果但是却不是唯一的结果，正所谓条条大道通罗马。和贪心算法一样，随便的一条回溯路线不一定是最佳的，寻找最佳结果还要靠别的机制，贪心算法比动态规划好的就是靠近最佳结果的几率更大些，而动态规划只是一个结果，它旨在找到一种方案，然而动态规划有自己的优势，就是如果你的模型建的好，那么它可以在每一步很轻松的情况下达到同样的效果，关键就是建模。</p>
+<h2>具体实现</h2>
+<p>英文版的详细实现过程在<a href="http://www.avatar.se/molbioinfo2001/dynprog/dynamic.html">Dynamic Programming</a>,其中有一点点小错误，但是不影响阅读。同时也可以阅读算法导论15.4最长公共子序列一章。前面已经说明diff算法把2个文件的行分别依次解析为两个校验码序列，形成一个(M+1)行(N+1)列的矩阵，然后引出一条蛇，蛇头勇往直前，呵呵，其实就是往矩阵里面的元素里填数字，从(0,0)一直到(M+1,N+1)的大方向填数字，保证所填的数字单调增长，也就是填入的数字不能比它的参照值小，将要填入的是Vi,j,那么它的参照值就是Vi-1,j-1，Vi-1,j和Vi,j-1，具体怎么做到呢？V值的增加只有一种可能性就是在Pi和Qj相等的情况下，其它情况下都是不增加的，所以Vi,j的值就是三者中最大的，Vi,j的参考值不是有三个吗？那么这种增加的情况和哪个参考值有关联呢？事实上是和对角的那个，也就是和Vi-1,j-1,仔细想一下，只有i和j同步增长才是P和Q的同步推进引起的比较，i和j的单独推进只是P序列或者Q序列的单独向前推进，也就是说在序列比对的时候就是一个gap，这种方式填表很简单，只要有左上，上，左三个值就可以求出当前的这个值，每一步都是那么的局部，最终填完后，找到最大的这个值的位置，很显然是最右下角的这个，然后回溯，怎么回溯呢？一个一个的找到当前值的前驱值所在的位置就可以了，最后将回溯的道路进行标注，得到了P和Q的两条路径，每写一个字符，如果路径和字符序列的方向垂直，那么就写一个空格，最终的结果就是diff的结果，很巧妙吧。不过以上的方式回溯写出来的路径不止一条，每一条路径都是一个结果。
+<a name="more"></a></p>
+<h2>总结</h2>
+<p>动态规划相比贪心都是局部的对既定规律的模仿，但是在diff中动态规划的算法部分并没有跟全局联系起来，直到完成了整个矩阵的填充过程才在回溯的时候和全局联系起来找到一条结果，但是不一定是最优的结果，贪心算法则一直显的很努力，每一步都想要靠近最优的结果。</p>
+<h2>参考文献</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Diff">diff</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Diff3">diff3</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem">Longest common subsequence problem</a></li>
+<li><a href="http://www.linuxsky.org/doc/admin/200712/213.html">diff和patch使用指南</a></li>
+<li><a href="http://binfo.ym.edu.tw/emboss/Apps/diffseq.html">EMBOSS:diffseq</a></li>
+<li><a href="http://networking.ctocio.com.cn/289/12393789.shtml">diff指令</a></li>
+<li><a href="http://www.avatar.se/molbioinfo2001/dynprog/adv_dynamic.html">Advanced Dynamic Programming Tutorial</a></li>
+</ul>
+]]></content>
+    <category scheme="http://blog.shujian.me/tags/算法/" term="算法"/>
+    <category scheme="http://blog.shujian.me/tags/diff/" term="diff"/>
+    <category scheme="http://blog.shujian.me/tags/动态规划/" term="动态规划"/>
+    <category scheme="http://blog.shujian.me/tags/回溯/" term="回溯"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[「算法导论」第9章中位数和顺序统计学的分析与其C语言的实现]]></title>
-    <link href="http://blog.shujian.me//2012/11/21/find-the-kth-large/"/>
-    <id>http://blog.shujian.me//2012/11/21/find-the-kth-large/</id>
+    <link href="http://blog.shujian.me/2012/11/21/find-the-kth-large/"/>
+    <id>http://blog.shujian.me/2012/11/21/find-the-kth-large/</id>
     <published>2012-11-21T00:00:00.000Z</published>
     <updated>2013-08-01T05:25:40.419Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -1551,42 +1583,10 @@ void Destroy ( HashTable <span class="variable">*hash</span> ) {
 <li><a href="http://www.cnblogs.com/zhjp11/archive/2010/02/26/1674227.html">寻找第K大的数的方法总结</a></li>
 </ul>
 ]]></content>
-    <category scheme="http://blog.shujian.me//tags/算法/" term="算法"/>
-    <category scheme="http://blog.shujian.me//tags/快速排序/" term="快速排序"/>
-    <category scheme="http://blog.shujian.me//tags/堆排序/" term="堆排序"/>
-    <category scheme="http://blog.shujian.me//tags/时间复杂度/" term="时间复杂度"/>
-    <category scheme="http://blog.shujian.me//categories/Algorithm/" term="Algorithm"/>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[动态规划在unix diff的下的使用]]></title>
-    <link href="http://blog.shujian.me//2012/11/21/dp-in-unix-diff/"/>
-    <id>http://blog.shujian.me//2012/11/21/dp-in-unix-diff/</id>
-    <published>2012-11-21T00:00:00.000Z</published>
-    <updated>2013-08-01T05:26:01.931Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>In computing, diff is a file comparison utility that outputs the differences between two files. It is typically used to show the changes between one version of a file and a former version of the same file. Diff displays the changes made per line for text files.</p>
-</blockquote>
-<h2>简介</h2>
-<p>通常情况下diff和patch一起使用，linux中的源代码补丁都是通过diff和patch的配合制作出来的。diff在比较两个文本文件的不同方面很高效，它是基于行的，diff会将两个文件都按照行分成若干部分，然后计算这些行每一行的校验码（最原始的做法是把每一行当成一个字符，但是空间复杂度会比较大，现在的做法是把每一行文本通过hash算法产生一个值，那么文本行的比较就变成了比较hash值，还用一个bit位贮存中间结果，把空间占有率减少到传统做法的1/8，但是算法时间复杂度依然是O(m*n)，没有决定性的提高），之后的问题就是比较这两个文件的所有行的校验码序列的不同了，这就把问题归结为了序列比对（or LCS）的问题。diff用的是动态规划算法，动态规划和贪心算法相似，但是其思想却是相反的，贪心算法保证每一步都是最小代价的，但是不能保证最终代价最小，而动态规划每一步什么也不知道，它从起点开始，只管局部地按照要求将无所谓的结果铺满全局，然后回溯，在这些繁复的数据之间找到一条从开始到最后的一条路径，为何这条路径就是结果呢？因为每一步都符合要求，所以无论如何最终随便一条按照要求的回溯路线都符合要求，可是可以看出，这条回溯路线的结果是一个正确结果但是却不是唯一的结果，正所谓条条大道通罗马。和贪心算法一样，随便的一条回溯路线不一定是最佳的，寻找最佳结果还要靠别的机制，贪心算法比动态规划好的就是靠近最佳结果的几率更大些，而动态规划只是一个结果，它旨在找到一种方案，然而动态规划有自己的优势，就是如果你的模型建的好，那么它可以在每一步很轻松的情况下达到同样的效果，关键就是建模。</p>
-<h2>具体实现</h2>
-<p>英文版的详细实现过程在<a href="http://www.avatar.se/molbioinfo2001/dynprog/dynamic.html">Dynamic Programming</a>,其中有一点点小错误，但是不影响阅读。同时也可以阅读算法导论15.4最长公共子序列一章。前面已经说明diff算法把2个文件的行分别依次解析为两个校验码序列，形成一个(M+1)行(N+1)列的矩阵，然后引出一条蛇，蛇头勇往直前，呵呵，其实就是往矩阵里面的元素里填数字，从(0,0)一直到(M+1,N+1)的大方向填数字，保证所填的数字单调增长，也就是填入的数字不能比它的参照值小，将要填入的是Vi,j,那么它的参照值就是Vi-1,j-1，Vi-1,j和Vi,j-1，具体怎么做到呢？V值的增加只有一种可能性就是在Pi和Qj相等的情况下，其它情况下都是不增加的，所以Vi,j的值就是三者中最大的，Vi,j的参考值不是有三个吗？那么这种增加的情况和哪个参考值有关联呢？事实上是和对角的那个，也就是和Vi-1,j-1,仔细想一下，只有i和j同步增长才是P和Q的同步推进引起的比较，i和j的单独推进只是P序列或者Q序列的单独向前推进，也就是说在序列比对的时候就是一个gap，这种方式填表很简单，只要有左上，上，左三个值就可以求出当前的这个值，每一步都是那么的局部，最终填完后，找到最大的这个值的位置，很显然是最右下角的这个，然后回溯，怎么回溯呢？一个一个的找到当前值的前驱值所在的位置就可以了，最后将回溯的道路进行标注，得到了P和Q的两条路径，每写一个字符，如果路径和字符序列的方向垂直，那么就写一个空格，最终的结果就是diff的结果，很巧妙吧。不过以上的方式回溯写出来的路径不止一条，每一条路径都是一个结果。
-<a name="more"></a></p>
-<h2>总结</h2>
-<p>动态规划相比贪心都是局部的对既定规律的模仿，但是在diff中动态规划的算法部分并没有跟全局联系起来，直到完成了整个矩阵的填充过程才在回溯的时候和全局联系起来找到一条结果，但是不一定是最优的结果，贪心算法则一直显的很努力，每一步都想要靠近最优的结果。</p>
-<h2>参考文献</h2>
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Diff">diff</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Diff3">diff3</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem">Longest common subsequence problem</a></li>
-<li><a href="http://www.linuxsky.org/doc/admin/200712/213.html">diff和patch使用指南</a></li>
-<li><a href="http://binfo.ym.edu.tw/emboss/Apps/diffseq.html">EMBOSS:diffseq</a></li>
-<li><a href="http://networking.ctocio.com.cn/289/12393789.shtml">diff指令</a></li>
-<li><a href="http://www.avatar.se/molbioinfo2001/dynprog/adv_dynamic.html">Advanced Dynamic Programming Tutorial</a></li>
-</ul>
-]]></content>
-    <category scheme="http://blog.shujian.me//tags/算法/" term="算法"/>
-    <category scheme="http://blog.shujian.me//tags/diff/" term="diff"/>
-    <category scheme="http://blog.shujian.me//tags/动态规划/" term="动态规划"/>
-    <category scheme="http://blog.shujian.me//tags/回溯/" term="回溯"/>
+    <category scheme="http://blog.shujian.me/tags/算法/" term="算法"/>
+    <category scheme="http://blog.shujian.me/tags/快速排序/" term="快速排序"/>
+    <category scheme="http://blog.shujian.me/tags/堆排序/" term="堆排序"/>
+    <category scheme="http://blog.shujian.me/tags/时间复杂度/" term="时间复杂度"/>
+    <category scheme="http://blog.shujian.me/categories/Algorithm/" term="Algorithm"/>
   </entry>
 </feed>
