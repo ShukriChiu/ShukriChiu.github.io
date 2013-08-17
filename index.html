@@ -87,6 +87,44 @@ woopra.track();
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-08-17T16:00:00.000Z"><a href="/2013/08/18/yet-another-month-in-beijing/">2013-08-18</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/08/18/yet-another-month-in-beijing/">yet another month in beijing</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>自从上次在北京的实习结束之后在学校待了几个月，然后在7月20+号又回到了北京。</p>
+<p>Sinoyuan是一家比较小的互联网startup company，founder <a href="http://baike.baidu.com/view/311240.htm">Jerry Yue</a>是一个年少有为，敢想敢做，散发着强烈的个人魅力的人，Sinoyuan只是他的几项成就之一。公司坐落在首都体育馆对面的Tenda Plaza，地理位置比较优越，周围的餐饮味道不错而且价格很Fair，相对北京整体消费算便宜的。我在公司做的是Web Developer，负责开发<a href="http://www.jiaedian.com">家e点的官网</a>,内部一个尚未Beta的产品<a href="http://www.36kr.com/p/202178.html">约见</a>的网页版，另外还外包了电视节目<a href="http://www.aipin.tv">爱拼才会赢的官网</a>。</p>
+<p>选择Sinoyuan主要是因为我需要更多的时间准备GRE和TOFEL考试。在大公司比如阿里、腾讯、百度之类任务会比较重，而且加班严重。在小公司的话工作时间比较弹性，而且老板人很好，愿意带我出去找各种各样的资源（他答应在实习结束之后帮我写推荐信到Duke U or CMU，这个对我申请的帮助会比较大）。而且我还认识了一批同龄人中跟我老板一样年轻有为的人，比如老板的朋友Philip，给Bill Gates基金会做Consult，人非常nice，我第一次跟着老板去参加摩根斯坦利的一个meeting，结束后跟着老板和他朋友吃饭的时候特别紧张，philip就一直在旁边跟我说话缓解我的紧张情绪。跟他们吃饭总是压力很大，一是他们经常就是4人之间tofel般的口语对话，我听起来比较吃力;二是我出入在他们的圈子他们一些人总会认为我是非常牛的人，然后就会热情的跟我握手，甚至以为我是Stanford U or Tsinghua U,但是实际上却是CSU的，让他们失望了。
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/08/18/yet-another-month-in-beijing/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-07-21T16:00:00.000Z"><a href="/2013/07/22/behance/">2013-07-22</a></time>
       
       
@@ -518,88 +556,6 @@ $ source ~/.bash_profile
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2012-11-21T00:00:00.000Z"><a href="/2012/11/21/find-the-kth-large/">2012-11-21</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2012/11/21/find-the-kth-large/">「算法导论」第9章中位数和顺序统计学的分析与其C语言的实现</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>本章讨论从一个由n个不同数值构成的集合（数组）中选择其第i个顺序统计量的问题。</p>
-</blockquote>
-<p>其实问题可以转化为：<strong>有一个大小为n的数组A[0,1,2,…,n-1]，求其中第k大的数</strong><br>该问题还可以变形为：<strong>有一个大小为 n的数组A[0,1,2,…,n-1]，求其中前k大的数</strong></p>
-<p>以上问题都可以形式化地定义为选择问题(selection problem),时间复杂度可以控制在O(n)的范围内。</p>
-<h2>简单的冒泡选择</h2>
-<p>轮循数组，每次将最大的数冒泡到数组右边，对每次冒泡计数，达到k次之后停止算法，返回从右起第k个数，时间复杂度为O(n*k)</p>
-<figure class="highlight lang-c"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-</pre></td><td class="code"><pre><span class="keyword">int</span> bubbleSelected ( <span class="keyword">int</span> a[], <span class="keyword">int</span> n, <span class="keyword">int</span> k ) {
-    <span class="keyword">int</span> temp;
-    <span class="keyword">int</span> i;
-    <span class="keyword">int</span> j;
-
-    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) {
-        <span class="keyword">for</span> ( j = i + <span class="number">1</span> ; j &lt; n; j++ ) {
-            <span class="keyword">if</span> ( a[i] &lt; a[j] ) {
-                swap ( &a[i], &a[j] );
-            }
-        }
-
-        <span class="keyword">if</span> ( i &gt; k - <span class="number">1</span> ) {
-            <span class="keyword">break</span>;
-        }
-    }
-
-    <span class="keyword">return</span> a[k - <span class="number">1</span>];
-}
-</pre></td></tr></table></figure>
-
-<p>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2012/11/21/find-the-kth-large/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -623,7 +579,7 @@ $ source ~/.bash_profile
   
     <li><a href="/categories/Algorithm/">Algorithm</a><small>2</small></li>
   
-    <li><a href="/categories/Life/">Life</a><small>3</small></li>
+    <li><a href="/categories/Life/">Life</a><small>4</small></li>
   
     <li><a href="/categories/Others/">Others</a><small>1</small></li>
   
@@ -684,7 +640,7 @@ $ source ~/.bash_profile
   
     <li><a href="/tags/动态规划/">动态规划</a><small>1</small></li>
   
-    <li><a href="/tags/北京/">北京</a><small>2</small></li>
+    <li><a href="/tags/北京/">北京</a><small>3</small></li>
   
     <li><a href="/tags/回溯/">回溯</a><small>1</small></li>
   
@@ -704,9 +660,11 @@ $ source ~/.bash_profile
   
     <li><a href="/tags/算法/">算法</a><small>2</small></li>
   
+    <li><a href="/tags/约见/">约见</a><small>1</small></li>
+  
     <li><a href="/tags/编程/">编程</a><small>1</small></li>
   
-    <li><a href="/tags/缘护天下/">缘护天下</a><small>1</small></li>
+    <li><a href="/tags/缘护天下/">缘护天下</a><small>2</small></li>
   
   </ul>
 </div>

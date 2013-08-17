@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>基于webrtc构建跨平台视频聊天室的阶段研究 | CRESCENDO | 人生如歌，或淡入，或渐强</title>
+  <title>约见 | CRESCENDO | 人生如歌，或淡入，或渐强</title>
   <meta name="author" content="Shukri Chiu">
   
   <meta name="description" content="如果有一天就这么死了，也许这里还活着。用Blog记录生活的点点滴滴，在这个信息时代留下点东西。不知道未来会发生些什么，总是要学会去坦然面对一切。">
   
-  <meta name="keywords" content="webrtc,视频聊天室">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="基于webrtc构建跨平台视频聊天室的阶段研究"/>
+  
   <meta property="og:site_name" content="CRESCENDO | 人生如歌，或淡入，或渐强"/>
 
   
@@ -80,74 +80,25 @@ woopra.track();
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2012-12-18T00:00:00.000Z"><a href="/2012/12/18/webrtc/">2012-12-18</a></time>
-      
-      
-  
-    <h1 class="title">基于webrtc构建跨平台视频聊天室的阶段研究</h1>
-  
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title tag">约见</h2>
 
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>WebRTC is a free, open project that enables web browsers with Real-Time Communications (RTC) capabilities via simple Javascript APIs. The WebRTC components have been optimized to best serve this purpose. </p>
-</blockquote>
-<h2>简介</h2>
-<p>由于计算机网络课程设计以及参加一个相关编程比赛的需要，本人尝试利用websocket和webrtc技术搭建一个跨平台的实时视频聊天室,<a href="https://github.com/zsj2145676/webrtc.chatdemo">项目地址在此</a></p>
-<h2>问题</h2>
-<p>项目采用热门的nodejs开发，参考了webrtc.io的lib库，实际使用的时候需要将Chatlib.js和client.js的host地址统一到本机的ip地址。但是在尝试开发pc与mobile的视频聊天的时候出现了一些问题(本人pc用的linux chrome 25,mobile终端用的ipad2).</p>
-<ul>
-<li>移动终端的浏览器不支持webrtc</li>
-<li>sony ericsson出了一款支持webrtc的浏览器bowser，但是我的代码拿不到peerconnection，基于其官方sample code修改之后也拿不到</li>
-<li>chrome和ericsson的webkit标准不同，其video标签的标准也不同（h.264和vp8）</li>
-</ul>
-<p><a name="more"></a></p>
-<h2>总结</h2>
-<p>webrtc的潜力还是非常巨大，从Google、Mozilla、Sony Ericsson等巨头的纷纷加入就可以看出来，但是现在的开发者社区还不够活跃，而且在瓷器国并且处于pptp被封杀的情况下，twitter、youtube、google group等非常有用的资源并不容易获得，进一步加大了国人参与webrtc开发的难度。现在只能持续关注webrtc，其标准还相当不稳定。</p>
-<h2>参考文献</h2>
-<ul>
-<li><a href="https://labs.ericsson.com/apps/bowser/sample-code">Sony Ericsson Labs Sample code</a>  </li>
-<li><a href="http://flashphoner.com/html5-webrtc-phone-not-yet">HTML5-WebRTC phone? Not yet.</a> </li>
-<li><a href="http://www.programmer.com.cn/4239/">VP8的前途与使命</a></li>
-</ul>
 
-      
-    </div>
-    <footer>
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/Techniques/">Techniques</a>
+  <div class="archive">
+    
+      <article class="post">
+        <div class="post-content">
+          <header>
+            <div class="icon"></div>
+            <time datetime="2013-08-17T16:00:00.000Z"><a href="/2013/08/18/yet-another-month-in-beijing/">2013-08-18</a></time>
+            
+              <h1 class="title"><a href="/2013/08/18/yet-another-month-in-beijing/">yet another month in beijing</a></h1>
+            
+          </header>
+        </div>
+      </article>
+    
   </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/webrtc/">webrtc</a>, <a href="/tags/websocket/">websocket</a>, <a href="/tags/nodejs/">nodejs</a>
-  </div>
-
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-<section id="comment">
-  <h1 class="title">Comments</h1>
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
@@ -292,7 +243,7 @@ var disqus_shortname = 'shukrichiu';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>
