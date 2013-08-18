@@ -276,6 +276,7 @@ article header .title a:hover {
 article .entry {
   text-align: justify;
   line-height: 1.6;
+  word-break: break-all;
 }
 article .entry p,
 article .entry blockquote,
