@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[CRESCENDO | 人生如歌，或淡入，或渐强]]></title>
-  <subtitle><![CDATA[花开堪折直须折 | gather ye rosebuds while ye may]]></subtitle>
+  <title><![CDATA[CRESCENDO]]></title>
+  <subtitle><![CDATA[人生如歌，或淡入，或渐强 | 花开堪折直须折 | gather ye rosebuds while ye may]]></subtitle>
   <link href="http://blog.shujian.me/atom.xml" rel="self"/>
   <link href="http://blog.shujian.me"/>
-  <updated>2013-08-18T05:50:01.029Z</updated>
+  <updated>2013-08-19T04:27:28.137Z</updated>
   <id>http://blog.shujian.me/</id>
   <author>
     <name><![CDATA[Shukri Chiu]]></name>
-    <email><![CDATA[zsj.jacob@gmail.com]]></email>
+    <email><![CDATA[ShukriChiu@gmail.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
   <entry>
