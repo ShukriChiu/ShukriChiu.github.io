@@ -71,14 +71,17 @@ strong {
 #header {
   -webkit-border-radius: 8px 8px 0 0;
   border-radius: 8px 8px 0 0;
-  background: #c6eafa -webkit-linear-gradient(#ddfbfc, #c6eafa);
-  background: #c6eafa -moz-linear-gradient(#ddfbfc, #c6eafa);
-  background: #c6eafa -o-linear-gradient(#ddfbfc, #c6eafa);
-  background: #c6eafa -ms-linear-gradient(#ddfbfc, #c6eafa);
-  background: #c6eafa linear-gradient(#ddfbfc, #c6eafa);
+  background: #a51c30 -webkit-linear-gradient(#a51c30, #a51c30);
+  background: #a51c30 -moz-linear-gradient(#a51c30, #a51c30);
+  background: #a51c30 -o-linear-gradient(#a51c30, #a51c30);
+  background: #a51c30 -ms-linear-gradient(#a51c30, #a51c30);
+  background: #a51c30 linear-gradient(#a51c30, #a51c30);
   position: relative;
   padding: 15px 30px;
   border-bottom: 1px solid #b2d2e1;
+}
+#header a {
+  color: #fff;
 }
 #header .title {
   float: left;
@@ -377,6 +380,8 @@ article .entry pre {
 }
 article .entry code {
   font-size: 13px;
+  border: 2px solid #808080;
+  padding: 0 2px 0 2px;
 }
 article .entry pre {
   padding: 10px 30px;
@@ -427,9 +432,8 @@ article .entry .text-lt {
   text-decoration: line-through;
 }
 article footer {
-  border-top: 1px solid #aaa;
-  padding: 10px 0 0 0;
-  margin-top: 10px;
+  text-align: center;
+  color: #808080;
 }
 article footer.end-sep {
   border-top: none;
