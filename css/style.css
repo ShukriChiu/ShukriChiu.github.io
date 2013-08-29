@@ -117,6 +117,16 @@ strong {
   font-size: 13px;
   font-style: italic;
 }
+footer {
+  border-top: 1px solid #808080;
+  padding-top: 10px;
+}
+.categories a {
+  border: 1px solid #808080;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 2px 2px 2px 2px;
+}
 article {
   padding: 15px 30px;
   font-size: 15px;
@@ -332,6 +342,10 @@ article .entry blockquote {
   background: rgba(0,0,0,0.06);
   color: #222;
 }
+article .entry blockquote footer {
+  color: #808080;
+  text-align: center;
+}
 article .entry img,
 article .entry video {
   max-width: 98%;
@@ -431,43 +445,39 @@ article .entry hr {
 article .entry .text-lt {
   text-decoration: line-through;
 }
-article footer {
-  text-align: center;
-  color: #808080;
-}
-article footer.end-sep {
+article .entry.end-sep {
   border-top: none;
   border-bottom: 1px solid #aaa;
   padding: 0 0 10px 0;
 }
-article footer a:before {
+article .entry a:before {
   font: 1.1em FontAwesome;
   padding-right: 10px;
   vertical-align: middle;
 }
-article footer a.more-link:before {
+article .entry a.more-link:before {
   content: '\f054';
 }
-article footer a.comment-link:before {
+article .entry a.comment-link:before {
   content: '\f075';
 }
-article footer .categories,
-article footer .tags {
+article .entry .categories,
+article .entry .tags {
   position: relative;
   padding-left: 25px;
   margin: 5px 0;
 }
-article footer .categories:before,
-article footer .tags:before {
+article .entry .categories:before,
+article .entry .tags:before {
   position: absolute;
   font: 1.1em FontAwesome;
 }
-article footer .categories:before {
+article .entry .categories:before {
   content: '\f07b';
   top: 4px;
   left: 1px;
 }
-article footer .tags:before {
+article .entry .tags:before {
   content: '\f02b';
   top: 5px;
   left: 2px;
