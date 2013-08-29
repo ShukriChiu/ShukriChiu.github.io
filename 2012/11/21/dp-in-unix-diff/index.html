@@ -18,46 +18,21 @@
     <meta property="og:image" content="undefined"/>
   
 
-  <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="http://feed.feedsky.com/DETACHMENT" title="CRESCENDO" type="application/atom+xml">
-  <link href='http://use.typekit.com/k/cjo5ipu-d.css?3bb2a6e53c9684ffdc9a9afe135b2a62d0c5cfebd5c62bc6cb59539a88d90df86f6b7cfa4efcadb00f2e0dff521f858aded36867d22a1a3027d665f67a29023f0561fa926e1efcbe8db69cffaff61d25522426f3929e634c99' rel='stylesheet' type='text/css'>
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="CRESCENDO" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   
-<!-- Start of BAIDU Code -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?9a777bb97d68d5027d70fc3873ea81f3";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- End of BAIDU Code -->
-<!-- Start of Woopra Code -->
-<script>
-(function(){
-var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-})("woopra");
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-42893624-1']);
+  _gaq.push(['_trackPageview']);
 
-woopra.config({
-    domain: 'shujian.me',
-    idle_timeout: 1800000
-});
-woopra.track();
-</script>
-<!-- End of Woopra Code -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42893624-1', 'shujian.me');
-  ga('send', 'pageview');
-
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 </script>
 
 </head>
@@ -102,19 +77,18 @@ woopra.track();
 <h2>简介</h2>
 <p>通常情况下diff和patch一起使用，linux中的源代码补丁都是通过diff和patch的配合制作出来的。diff在比较两个文本文件的不同方面很高效，它是基于行的，diff会将两个文件都按照行分成若干部分，然后计算这些行每一行的校验码（最原始的做法是把每一行当成一个字符，但是空间复杂度会比较大，现在的做法是把每一行文本通过hash算法产生一个值，那么文本行的比较就变成了比较hash值，还用一个bit位贮存中间结果，把空间占有率减少到传统做法的1/8，但是算法时间复杂度依然是O(m*n)，没有决定性的提高），之后的问题就是比较这两个文件的所有行的校验码序列的不同了，这就把问题归结为了序列比对（or LCS）的问题。diff用的是动态规划算法，动态规划和贪心算法相似，但是其思想却是相反的，贪心算法保证每一步都是最小代价的，但是不能保证最终代价最小，而动态规划每一步什么也不知道，它从起点开始，只管局部地按照要求将无所谓的结果铺满全局，然后回溯，在这些繁复的数据之间找到一条从开始到最后的一条路径，为何这条路径就是结果呢？因为每一步都符合要求，所以无论如何最终随便一条按照要求的回溯路线都符合要求，可是可以看出，这条回溯路线的结果是一个正确结果但是却不是唯一的结果，正所谓条条大道通罗马。和贪心算法一样，随便的一条回溯路线不一定是最佳的，寻找最佳结果还要靠别的机制，贪心算法比动态规划好的就是靠近最佳结果的几率更大些，而动态规划只是一个结果，它旨在找到一种方案，然而动态规划有自己的优势，就是如果你的模型建的好，那么它可以在每一步很轻松的情况下达到同样的效果，关键就是建模。</p>
 <h2>具体实现</h2>
-<p>英文版的详细实现过程在<a href="http://www.avatar.se/molbioinfo2001/dynprog/dynamic.html">Dynamic Programming</a>,其中有一点点小错误，但是不影响阅读。同时也可以阅读算法导论15.4最长公共子序列一章。前面已经说明diff算法把2个文件的行分别依次解析为两个校验码序列，形成一个(M+1)行(N+1)列的矩阵，然后引出一条蛇，蛇头勇往直前，呵呵，其实就是往矩阵里面的元素里填数字，从(0,0)一直到(M+1,N+1)的大方向填数字，保证所填的数字单调增长，也就是填入的数字不能比它的参照值小，将要填入的是Vi,j,那么它的参照值就是Vi-1,j-1，Vi-1,j和Vi,j-1，具体怎么做到呢？V值的增加只有一种可能性就是在Pi和Qj相等的情况下，其它情况下都是不增加的，所以Vi,j的值就是三者中最大的，Vi,j的参考值不是有三个吗？那么这种增加的情况和哪个参考值有关联呢？事实上是和对角的那个，也就是和Vi-1,j-1,仔细想一下，只有i和j同步增长才是P和Q的同步推进引起的比较，i和j的单独推进只是P序列或者Q序列的单独向前推进，也就是说在序列比对的时候就是一个gap，这种方式填表很简单，只要有左上，上，左三个值就可以求出当前的这个值，每一步都是那么的局部，最终填完后，找到最大的这个值的位置，很显然是最右下角的这个，然后回溯，怎么回溯呢？一个一个的找到当前值的前驱值所在的位置就可以了，最后将回溯的道路进行标注，得到了P和Q的两条路径，每写一个字符，如果路径和字符序列的方向垂直，那么就写一个空格，最终的结果就是diff的结果，很巧妙吧。不过以上的方式回溯写出来的路径不止一条，每一条路径都是一个结果。
-<a name="more"></a></p>
+<p>英文版的详细实现过程在<a href="http://www.avatar.se/molbioinfo2001/dynprog/dynamic.html" target="_blank">Dynamic Programming</a>,其中有一点点小错误，但是不影响阅读。同时也可以阅读算法导论15.4最长公共子序列一章。前面已经说明diff算法把2个文件的行分别依次解析为两个校验码序列，形成一个(M+1)行(N+1)列的矩阵，然后引出一条蛇，蛇头勇往直前，呵呵，其实就是往矩阵里面的元素里填数字，从(0,0)一直到(M+1,N+1)的大方向填数字，保证所填的数字单调增长，也就是填入的数字不能比它的参照值小，将要填入的是Vi,j,那么它的参照值就是Vi-1,j-1，Vi-1,j和Vi,j-1，具体怎么做到呢？V值的增加只有一种可能性就是在Pi和Qj相等的情况下，其它情况下都是不增加的，所以Vi,j的值就是三者中最大的，Vi,j的参考值不是有三个吗？那么这种增加的情况和哪个参考值有关联呢？事实上是和对角的那个，也就是和Vi-1,j-1,仔细想一下，只有i和j同步增长才是P和Q的同步推进引起的比较，i和j的单独推进只是P序列或者Q序列的单独向前推进，也就是说在序列比对的时候就是一个gap，这种方式填表很简单，只要有左上，上，左三个值就可以求出当前的这个值，每一步都是那么的局部，最终填完后，找到最大的这个值的位置，很显然是最右下角的这个，然后回溯，怎么回溯呢？一个一个的找到当前值的前驱值所在的位置就可以了，最后将回溯的道路进行标注，得到了P和Q的两条路径，每写一个字符，如果路径和字符序列的方向垂直，那么就写一个空格，最终的结果就是diff的结果，很巧妙吧。不过以上的方式回溯写出来的路径不止一条，每一条路径都是一个结果。<br><a id="more"></a></p>
 <h2>总结</h2>
 <p>动态规划相比贪心都是局部的对既定规律的模仿，但是在diff中动态规划的算法部分并没有跟全局联系起来，直到完成了整个矩阵的填充过程才在回溯的时候和全局联系起来找到一条结果，但是不一定是最优的结果，贪心算法则一直显的很努力，每一步都想要靠近最优的结果。</p>
 <h2>参考文献</h2>
 <ul>
-<li><a href="http://en.wikipedia.org/wiki/Diff">diff</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Diff3">diff3</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem">Longest common subsequence problem</a></li>
-<li><a href="http://www.linuxsky.org/doc/admin/200712/213.html">diff和patch使用指南</a></li>
-<li><a href="http://binfo.ym.edu.tw/emboss/Apps/diffseq.html">EMBOSS:diffseq</a></li>
-<li><a href="http://networking.ctocio.com.cn/289/12393789.shtml">diff指令</a></li>
-<li><a href="http://www.avatar.se/molbioinfo2001/dynprog/adv_dynamic.html">Advanced Dynamic Programming Tutorial</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Diff" target="_blank">diff</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Diff3" target="_blank">diff3</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem" target="_blank">Longest common subsequence problem</a></li>
+<li><a href="http://www.linuxsky.org/doc/admin/200712/213.html" target="_blank">diff和patch使用指南</a></li>
+<li><a href="http://binfo.ym.edu.tw/emboss/Apps/diffseq.html" target="_blank">EMBOSS:diffseq</a></li>
+<li><a href="http://networking.ctocio.com.cn/289/12393789.shtml" target="_blank">diff指令</a></li>
+<li><a href="http://www.avatar.se/molbioinfo2001/dynprog/adv_dynamic.html" target="_blank">Advanced Dynamic Programming Tutorial</a></li>
 </ul>
 
       
@@ -134,6 +108,23 @@ woopra.track();
   </div>
 
         
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
       
       <div class="clearfix"></div>
     </footer>
@@ -186,21 +177,21 @@ woopra.track();
   
     <li><a href="/tags/IPC/">IPC</a><small>1</small></li>
   
-    <li><a href="/tags/Mac-OS-X/">Mac OS X</a><small>1</small></li>
+    <li><a href="/tags/Mac OS X/">Mac OS X</a><small>1</small></li>
   
-    <li><a href="/tags/Process-Comunication/">Process Comunication</a><small>1</small></li>
+    <li><a href="/tags/Process Comunication/">Process Comunication</a><small>1</small></li>
   
     <li><a href="/tags/apple/">apple</a><small>1</small></li>
   
     <li><a href="/tags/blog/">blog</a><small>1</small></li>
   
-    <li><a href="/tags/c-1/">c</a><small>1</small></li>
+    <li><a href="/tags/c/">c</a><small>1</small></li>
   
     <li><a href="/tags/creative/">creative</a><small>1</small></li>
   
     <li><a href="/tags/diff/">diff</a><small>1</small></li>
   
-    <li><a href="/tags/github-page/">github page</a><small>1</small></li>
+    <li><a href="/tags/github page/">github page</a><small>1</small></li>
   
     <li><a href="/tags/incapsula/">incapsula</a><small>1</small></li>
   
@@ -253,24 +244,6 @@ woopra.track();
   </ul>
 </div>
 
-
-  
-
-
-  <div class="widget music">
-  <h3 class="title">Favorite Albums</h3>
-  <br>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2392825603/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://mikecavanaugh.bandcamp.com/album/lovely-lonely-place">Lovely Lonely Place by Mike Cavanaugh</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2402931004/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://locirecords.bandcamp.com/album/dusk-to-dawn">Dusk to Dawn by Emancipator</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2161956980/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://lullatone.bandcamp.com/album/soundtracks-for-everyday-adventures">Soundtracks for Everyday Adventures by Lullatone</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2075294543/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://thepaperbacks.bandcamp.com/album/an-illusion-against-death">An Illusion Against Death by The Paperbacks</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=1034625230/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://ohdaughter.bandcamp.com/album/his-young-heart-ep">His Young Heart EP by Daughter</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=1101947474/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://emancipator.bandcamp.com/album/safe-in-the-steep-cliffs">safe in the steep cliffs by emancipator</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=96728/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://fabriziopaterlinirecords.com/album/now">Now by Fabrizio Paterlini</a></iframe>
-  <embed src="http://www.xiami.com/widget/17965432_23090057_270_270_cccccc_dddddd_1/collectPlayer.swf" type="application/x-shockwave-flash" width="270" height="270" wmode="opaque"></embed>
-  
-</div>
-
 </aside>
     <div class="clearfix"></div>
   </div>
@@ -280,7 +253,8 @@ woopra.track();
   
 </div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
 

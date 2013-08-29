@@ -18,46 +18,21 @@
     <meta property="og:image" content="undefined"/>
   
 
-  <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="http://feed.feedsky.com/DETACHMENT" title="CRESCENDO" type="application/atom+xml">
-  <link href='http://use.typekit.com/k/cjo5ipu-d.css?3bb2a6e53c9684ffdc9a9afe135b2a62d0c5cfebd5c62bc6cb59539a88d90df86f6b7cfa4efcadb00f2e0dff521f858aded36867d22a1a3027d665f67a29023f0561fa926e1efcbe8db69cffaff61d25522426f3929e634c99' rel='stylesheet' type='text/css'>
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="CRESCENDO" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   
-<!-- Start of BAIDU Code -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?9a777bb97d68d5027d70fc3873ea81f3";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- End of BAIDU Code -->
-<!-- Start of Woopra Code -->
-<script>
-(function(){
-var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-})("woopra");
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-42893624-1']);
+  _gaq.push(['_trackPageview']);
 
-woopra.config({
-    domain: 'shujian.me',
-    idle_timeout: 1800000
-});
-woopra.track();
-</script>
-<!-- End of Woopra Code -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42893624-1', 'shujian.me');
-  ga('send', 'pageview');
-
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 </script>
 
 </head>
@@ -122,85 +97,8 @@ woopra.track();
 <li>外部事件 例如用户按下Delete键、定时器到期等</li>
 <li>显式请求 进程主动调用kill函数或者raise函数</li>
 </ul>
-<p><a name="more"></a>
-UNIX系统为每一种可能的事件定义了一组信号，每一个信号有一个信号名，名字均以SIG打头，UNIX系统中常用的信号: </p>
-<table >
-    <tr>
-        <td>&#20449;&#21495;</td>
-        <td>&#25551;&#36848;</td>
-        <td>&#40664;&#35748;&#22788;&#29702;</td>
-    </tr>
-    <tr>
-        <td>SIGABRT</td>
-        <td>&#36827;&#31243;&#24322;&#24120;&#20013;&#27490;&#65292;&#35843;&#29992;abort&#20989;&#25968;&#29983;&#25104;&#35813;&#20449;&#21495;</td>
-        <td>&#24322;&#24120;&#20013;&#27490;</td>
-    </tr>
-    <tr>
-        <td>SIGALRM</td>
-        <td>&#23454;&#26102;&#38393;&#38047;</td>
-        <td>&#36827;&#31243;&#36864;&#20986;</td>
-    </tr>
-    <tr>
-        <td>SIGFPE</td>
-        <td>&#31639;&#26415;&#20363;&#22806;</td>
-        <td>&#24322;&#24120;&#20013;&#27490;</td>
-    </tr>
-    <tr>
-        <td>SIGHUP</td>
-        <td>&#25346;&#36215;&#36827;&#31243;</td>
-        <td>&#36827;&#31243;&#36864;&#20986;</td>
-    </tr>
-    <tr>
-        <td>SIGILL</td>
-        <td>&#38750;&#27861;&#30828;&#20214;&#25351;&#20196;</td>
-        <td>&#24322;&#24120;&#32456;&#27490;</td>
-    </tr>
-    <tr>
-        <td>SIGKILL</td>
-        <td>&#32456;&#27490;&#36827;&#31243;</td>
-        <td>&#36827;&#31243;&#36864;&#20986;</td>
-    </tr>
-    <tr>
-        <td>SIGPIPE</td>
-        <td>&#20889;&#27809;&#26377;&#35835;&#32773;&#30340;&#31649;&#36947;</td>
-        <td>&#36827;&#31243;&#36864;&#20986;</td>
-    </tr>
-    <tr>
-        <td>SIGQUIT</td>
-        <td>&#32456;&#31471;quit&#23383;&#31526; &#65288;ctrl-\&#65289;</td>
-        <td>&#24322;&#24120;&#32456;&#27490;</td>
-    </tr>
-    <tr>
-        <td>SIGSEGV</td>
-        <td>&#38750;&#27861;&#23384;&#20648;&#35775;&#38382;&#65288;&#22320;&#22336;&#36234;&#30028;&#65289;</td>
-        <td>&#24322;&#24120;&#32456;&#27490;</td>
-    </tr>
-    <tr>
-        <td>SIGTERM</td>
-        <td>&#32456;&#27490;&#36827;&#31243;</td>
-        <td>&#36864;&#20986;</td>
-    </tr>
-    <tr>
-        <td>SIGTRAP</td>
-        <td>&#30828;&#20214;&#33258;&#38519;</td>
-        <td>&#24322;&#24120;&#32456;&#27490;</td>
-    </tr>
-    <tr>
-        <td>SIGUSR1</td>
-        <td>&#29992;&#25143;&#33258;&#23450;&#20041;&#20449;&#21495;</td>
-        <td>&#36864;&#20986;</td>
-    </tr>
-    <tr>
-        <td>SIGUSR2</td>
-        <td>&#29992;&#25143;&#33258;&#23450;&#20041;&#20449;&#21495;</td>
-        <td>&#36864;&#20986;</td>
-    </tr>
-    <tr>
-        <td>SIGSTOP</td>
-        <td>&#20572;&#27490;&#36827;&#31243;</td>
-        <td>&#36864;&#20986;</td>
-    </tr>
-</table>
+<p><a id="more"></a><br>UNIX系统为每一种可能的事件定义了一组信号，每一个信号有一个信号名，名字均以SIG打头，UNIX系统中常用的信号: </p>
+<table ><br>    <tr><br>        <td>&#20449;&#21495;</td><br>        <td>&#25551;&#36848;</td><br>        <td>&#40664;&#35748;&#22788;&#29702;</td><br>    </tr><br>    <tr><br>        <td>SIGABRT</td><br>        <td>&#36827;&#31243;&#24322;&#24120;&#20013;&#27490;&#65292;&#35843;&#29992;abort&#20989;&#25968;&#29983;&#25104;&#35813;&#20449;&#21495;</td><br>        <td>&#24322;&#24120;&#20013;&#27490;</td><br>    </tr><br>    <tr><br>        <td>SIGALRM</td><br>        <td>&#23454;&#26102;&#38393;&#38047;</td><br>        <td>&#36827;&#31243;&#36864;&#20986;</td><br>    </tr><br>    <tr><br>        <td>SIGFPE</td><br>        <td>&#31639;&#26415;&#20363;&#22806;</td><br>        <td>&#24322;&#24120;&#20013;&#27490;</td><br>    </tr><br>    <tr><br>        <td>SIGHUP</td><br>        <td>&#25346;&#36215;&#36827;&#31243;</td><br>        <td>&#36827;&#31243;&#36864;&#20986;</td><br>    </tr><br>    <tr><br>        <td>SIGILL</td><br>        <td>&#38750;&#27861;&#30828;&#20214;&#25351;&#20196;</td><br>        <td>&#24322;&#24120;&#32456;&#27490;</td><br>    </tr><br>    <tr><br>        <td>SIGKILL</td><br>        <td>&#32456;&#27490;&#36827;&#31243;</td><br>        <td>&#36827;&#31243;&#36864;&#20986;</td><br>    </tr><br>    <tr><br>        <td>SIGPIPE</td><br>        <td>&#20889;&#27809;&#26377;&#35835;&#32773;&#30340;&#31649;&#36947;</td><br>        <td>&#36827;&#31243;&#36864;&#20986;</td><br>    </tr><br>    <tr><br>        <td>SIGQUIT</td><br>        <td>&#32456;&#31471;quit&#23383;&#31526; &#65288;ctrl-\&#65289;</td><br>        <td>&#24322;&#24120;&#32456;&#27490;</td><br>    </tr><br>    <tr><br>        <td>SIGSEGV</td><br>        <td>&#38750;&#27861;&#23384;&#20648;&#35775;&#38382;&#65288;&#22320;&#22336;&#36234;&#30028;&#65289;</td><br>        <td>&#24322;&#24120;&#32456;&#27490;</td><br>    </tr><br>    <tr><br>        <td>SIGTERM</td><br>        <td>&#32456;&#27490;&#36827;&#31243;</td><br>        <td>&#36864;&#20986;</td><br>    </tr><br>    <tr><br>        <td>SIGTRAP</td><br>        <td>&#30828;&#20214;&#33258;&#38519;</td><br>        <td>&#24322;&#24120;&#32456;&#27490;</td><br>    </tr><br>    <tr><br>        <td>SIGUSR1</td><br>        <td>&#29992;&#25143;&#33258;&#23450;&#20041;&#20449;&#21495;</td><br>        <td>&#36864;&#20986;</td><br>    </tr><br>    <tr><br>        <td>SIGUSR2</td><br>        <td>&#29992;&#25143;&#33258;&#23450;&#20041;&#20449;&#21495;</td><br>        <td>&#36864;&#20986;</td><br>    </tr><br>    <tr><br>        <td>SIGSTOP</td><br>        <td>&#20572;&#27490;&#36827;&#31243;</td><br>        <td>&#36864;&#20986;</td><br>    </tr><br></table>
 
 <p>信号的产生，可以使用三个系统调用:</p>
 <ul>
@@ -315,8 +213,7 @@ UNIX系统为每一种可能的事件定义了一组信号，每一个信号有�
 </pre></td></tr></table></figure>
 
 <p><img src="http://sergio-blog.qiniudn.com/alarm_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
-<p>实际上信号名都可以使用<code>kill -l</code>命令查询到
-<img src="http://sergio-blog.qiniudn.com/kill-l-instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
+<p>实际上信号名都可以使用<code>kill -l</code>命令查询到<br><img src="http://sergio-blog.qiniudn.com/kill-l-instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
 <p>下面是用<code>void* signal(int sig , void(* func )(int ))</code>函数捕获SIGINT信号的例子(在<code>Terminal</code>中通过按下<code>Ctrl+C</code>产生):</p>
 <figure class="highlight lang-c"><table><tr><td class="gutter"><pre>1
 2
@@ -360,8 +257,7 @@ UNIX系统为每一种可能的事件定义了一组信号，每一个信号有�
 }
 </pre></td></tr></table></figure>
 
-<p>运行结果如下图:
-<img src="http://sergio-blog.qiniudn.com/signal_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
+<p>运行结果如下图:<br><img src="http://sergio-blog.qiniudn.com/signal_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
 <p>下面是关于自定义信号的使用的例子:</p>
 <figure class="highlight lang-c"><table><tr><td class="gutter"><pre>1
 2
@@ -429,8 +325,7 @@ void signal_handle ( <span class="keyword">int</span> the_signal ) {
 }
 </pre></td></tr></table></figure>
 
-<p>程序运行结果:
-<img src="http://sergio-blog.qiniudn.com/signal_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
+<p>程序运行结果:<br><img src="http://sergio-blog.qiniudn.com/signal_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
 <h2>管道通信</h2>
 <p>UNIX中的管道用于进程通信,是一种先进先出（FIFO）的特殊文件,通常是一个进程向管道中写入数据，另一个进程从管道中读出数据,从而完成通信的目的.</p>
 <p>管道的特点:</p>
@@ -541,41 +436,9 @@ void signal_handle ( <span class="keyword">int</span> the_signal ) {
 }
 </pre></td></tr></table></figure>
 
-<p>程序运行结果(最下面有个EOF乱码问题,暂时还不知道如何解决)：
-<img src="http://sergio-blog.qiniudn.com/pipe_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
+<p>程序运行结果(最下面有个EOF乱码问题,暂时还不知道如何解决)：<br><img src="http://sergio-blog.qiniudn.com/pipe_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
 <p>另一种方式是有名管道:</p>
-<table >
-   <tr>
-      <td>&#29305;&#24615;</td>
-      <td>&#26377;&#21517;&#31649;&#36947;</td>
-      <td>&#26080;&#21517;&#31649;&#36947;</td>
-   </tr>
-   <tr>
-      <td>&#36827;&#31243;&#30340;&#20351;&#29992;&#36164;&#26684;</td>
-      <td>&#27809;&#26377;&#38480;&#21046;</td>
-      <td>&#24517;&#39035;&#26377;&#29238;&#23376;&#20851;&#31995;</td>
-   </tr>
-   <tr>
-      <td>&#25991;&#20214;&#21517;&#31216;</td>
-      <td>&#26377;&#25991;&#20214;&#21517;&#65292;&#21487;&#20197;&#29992;ls –l&#26597;&#30475;&#65292;&#20854;&#25991;&#20214;&#23646;&#24615;&#20026;p</td>
-      <td>&#27809;&#26377;&#25991;&#20214;&#21517;&#31216;</td>
-   </tr>
-   <tr>
-      <td>&#25968;&#25454;&#35835;&#20889;&#30340;&#27425;&#24207;</td>
-      <td>&#20808;&#36827;&#20808;&#20986;</td>
-      <td>&#20808;&#36827;&#20808;&#20986;</td>
-   </tr>
-   <tr>
-      <td>&#24314;&#31435;&#30340;&#26041;&#24335;</td>
-      <td>&#20351;&#29992;mkfifo&#25110;&#32773;mknod&#20989;&#25968;</td>
-      <td>&#20351;&#29992;pipe&#20989;&#25968;</td>
-   </tr>
-   <tr>
-      <td>&#21024;&#38500;&#30340;&#26041;&#24335;</td>
-      <td>&#20351;&#29992;rm&#21629;&#20196;&#25110;&#32773;unlink&#20989;&#25968;</td>
-      <td>&#34987;&#20351;&#29992;&#23436;&#21518;&#65292;&#20250;&#34987;&#33258;&#21160;&#21024;&#38500;</td>
-   </tr>
-</table>
+<table ><br>   <tr><br>      <td>&#29305;&#24615;</td><br>      <td>&#26377;&#21517;&#31649;&#36947;</td><br>      <td>&#26080;&#21517;&#31649;&#36947;</td><br>   </tr><br>   <tr><br>      <td>&#36827;&#31243;&#30340;&#20351;&#29992;&#36164;&#26684;</td><br>      <td>&#27809;&#26377;&#38480;&#21046;</td><br>      <td>&#24517;&#39035;&#26377;&#29238;&#23376;&#20851;&#31995;</td><br>   </tr><br>   <tr><br>      <td>&#25991;&#20214;&#21517;&#31216;</td><br>      <td>&#26377;&#25991;&#20214;&#21517;&#65292;&#21487;&#20197;&#29992;ls –l&#26597;&#30475;&#65292;&#20854;&#25991;&#20214;&#23646;&#24615;&#20026;p</td><br>      <td>&#27809;&#26377;&#25991;&#20214;&#21517;&#31216;</td><br>   </tr><br>   <tr><br>      <td>&#25968;&#25454;&#35835;&#20889;&#30340;&#27425;&#24207;</td><br>      <td>&#20808;&#36827;&#20808;&#20986;</td><br>      <td>&#20808;&#36827;&#20808;&#20986;</td><br>   </tr><br>   <tr><br>      <td>&#24314;&#31435;&#30340;&#26041;&#24335;</td><br>      <td>&#20351;&#29992;mkfifo&#25110;&#32773;mknod&#20989;&#25968;</td><br>      <td>&#20351;&#29992;pipe&#20989;&#25968;</td><br>   </tr><br>   <tr><br>      <td>&#21024;&#38500;&#30340;&#26041;&#24335;</td><br>      <td>&#20351;&#29992;rm&#21629;&#20196;&#25110;&#32773;unlink&#20989;&#25968;</td><br>      <td>&#34987;&#20351;&#29992;&#23436;&#21518;&#65292;&#20250;&#34987;&#33258;&#21160;&#21024;&#38500;</td><br>   </tr><br></table>
 
 <p>通常使用的有名管道相关函数有：</p>
 <ul>
@@ -596,48 +459,7 @@ void signal_handle ( <span class="keyword">int</span> the_signal ) {
 <li>信号量方式：允许进程在一组信号量上进行交互，完成同步地执行</li>
 </ul>
 <p>以下是信号与消息的比较:</p>
-<table >
-   <tr>
-      <td>&#29305;&#24615;</td>
-      <td>&#20449;&#21495;</td>
-      <td>&#28040;&#24687;</td>
-   </tr>
-   <tr>
-      <td>&#25968;&#25454;&#20869;&#23481;</td>
-      <td>&#21482;&#26159;&#19968;&#20123;&#39044;&#35774;&#22909;&#30340;&#20195;&#30721;&#29992;&#20197;&#34920;&#31034;&#31995;&#32479;&#21457;&#29983;&#30340;&#26576;&#20123;&#29366;&#20917;</td>
-      <td>&#20026;&#19968;&#32452;&#36830;&#32493;&#35821;&#21477;&#25110;&#32773;&#31526;&#21495;&#65292;&#36890;&#24120;&#37327;&#19981;&#20250;&#22826;&#22823;(&#27604;&#22914;1024&#23383;&#33410;)</td>
-   </tr>
-   <tr>
-      <td>&#29992;&#36884;</td>
-      <td>&#25285;&#20219;&#36827;&#31243;&#38388;&#23569;&#37327;&#20449;&#24687;&#30340;&#20256;&#36865;&#65292;&#22810;&#21322;&#26159;&#26680;&#24515;&#31243;&#24207;&#29992;&#26469;&#36890;&#30693;&#29992;&#25143;&#36827;&#31243;&#19968;&#20123;&#24322;&#24120;&#30340;&#29366;&#20917;</td>
-      <td>&#29992;&#20110;&#36827;&#31243;&#20043;&#38388;&#24444;&#27492;&#36827;&#34892;&#25968;&#25454;&#20132;&#25442;</td>
-   </tr>
-   <tr>
-      <td>&#21457;&#36865;&#26102;&#21051;</td>
-      <td>&#20219;&#20309;&#26102;&#38388;</td>
-      <td>&#19981;&#26159;&#20219;&#20309;&#26102;&#21051;&#37117;&#21487;&#20197;&#21457;&#36865;</td>
-   </tr>
-   <tr>
-      <td>&#21457;&#36865;&#32773;&#36776;&#35782;</td>
-      <td>&#19981;&#30693;&#36947;&#21457;&#36865;&#32773;&#26159;&#35841;</td>
-      <td>&#26126;&#30830;&#30693;&#36947;&#21457;&#36865;&#32773;&#26159;&#35841;</td>
-   </tr>
-   <tr>
-      <td>&#36865;&#24448;&#23545;&#35937;</td>
-      <td>&#26576;&#20010;&#36827;&#31243;</td>
-      <td>&#28040;&#24687;&#38431;&#21015;</td>
-   </tr>
-   <tr>
-      <td>&#22788;&#29702;&#26041;&#27861;</td>
-      <td>&#21487;&#20197;&#22788;&#29702;&#25110;&#32773;&#19981;&#20104;&#29702;&#20250;</td>
-      <td>&#24517;&#39035;&#35201;&#22788;&#29702;</td>
-   </tr>
-   <tr>
-      <td>&#25968;&#25454;&#20256;&#36755;&#25928;&#29575;</td>
-      <td>&#19981;&#36866;&#21512;&#36739;&#22823;&#37327;&#30340;&#20449;&#24687;&#20256;&#36755;&#65292;&#25928;&#29575;&#24046;</td>
-      <td>&#23545;&#20013;&#31561;&#25968;&#37327;&#30340;&#25968;&#25454;&#20256;&#36865;&#25928;&#29575;&#22909;</td>
-   </tr>
-</table>
+<table ><br>   <tr><br>      <td>&#29305;&#24615;</td><br>      <td>&#20449;&#21495;</td><br>      <td>&#28040;&#24687;</td><br>   </tr><br>   <tr><br>      <td>&#25968;&#25454;&#20869;&#23481;</td><br>      <td>&#21482;&#26159;&#19968;&#20123;&#39044;&#35774;&#22909;&#30340;&#20195;&#30721;&#29992;&#20197;&#34920;&#31034;&#31995;&#32479;&#21457;&#29983;&#30340;&#26576;&#20123;&#29366;&#20917;</td><br>      <td>&#20026;&#19968;&#32452;&#36830;&#32493;&#35821;&#21477;&#25110;&#32773;&#31526;&#21495;&#65292;&#36890;&#24120;&#37327;&#19981;&#20250;&#22826;&#22823;(&#27604;&#22914;1024&#23383;&#33410;)</td><br>   </tr><br>   <tr><br>      <td>&#29992;&#36884;</td><br>      <td>&#25285;&#20219;&#36827;&#31243;&#38388;&#23569;&#37327;&#20449;&#24687;&#30340;&#20256;&#36865;&#65292;&#22810;&#21322;&#26159;&#26680;&#24515;&#31243;&#24207;&#29992;&#26469;&#36890;&#30693;&#29992;&#25143;&#36827;&#31243;&#19968;&#20123;&#24322;&#24120;&#30340;&#29366;&#20917;</td><br>      <td>&#29992;&#20110;&#36827;&#31243;&#20043;&#38388;&#24444;&#27492;&#36827;&#34892;&#25968;&#25454;&#20132;&#25442;</td><br>   </tr><br>   <tr><br>      <td>&#21457;&#36865;&#26102;&#21051;</td><br>      <td>&#20219;&#20309;&#26102;&#38388;</td><br>      <td>&#19981;&#26159;&#20219;&#20309;&#26102;&#21051;&#37117;&#21487;&#20197;&#21457;&#36865;</td><br>   </tr><br>   <tr><br>      <td>&#21457;&#36865;&#32773;&#36776;&#35782;</td><br>      <td>&#19981;&#30693;&#36947;&#21457;&#36865;&#32773;&#26159;&#35841;</td><br>      <td>&#26126;&#30830;&#30693;&#36947;&#21457;&#36865;&#32773;&#26159;&#35841;</td><br>   </tr><br>   <tr><br>      <td>&#36865;&#24448;&#23545;&#35937;</td><br>      <td>&#26576;&#20010;&#36827;&#31243;</td><br>      <td>&#28040;&#24687;&#38431;&#21015;</td><br>   </tr><br>   <tr><br>      <td>&#22788;&#29702;&#26041;&#27861;</td><br>      <td>&#21487;&#20197;&#22788;&#29702;&#25110;&#32773;&#19981;&#20104;&#29702;&#20250;</td><br>      <td>&#24517;&#39035;&#35201;&#22788;&#29702;</td><br>   </tr><br>   <tr><br>      <td>&#25968;&#25454;&#20256;&#36755;&#25928;&#29575;</td><br>      <td>&#19981;&#36866;&#21512;&#36739;&#22823;&#37327;&#30340;&#20449;&#24687;&#20256;&#36755;&#65292;&#25928;&#29575;&#24046;</td><br>      <td>&#23545;&#20013;&#31561;&#25968;&#37327;&#30340;&#25968;&#25454;&#20256;&#36865;&#25928;&#29575;&#22909;</td><br>   </tr><br></table>
 
 <p>消息的接受需要用到函数<code>msgrcv</code>,消息队列的控制需要用到函数<code>msgctl</code><br>下面是一段进程间通信的例子</p>
 <figure class="highlight lang-c"><table><tr><td class="gutter"><pre>1
@@ -816,8 +638,7 @@ have fun !
 }
 </pre></td></tr></table></figure>
 
-<p>程序运行结果如下:
-<img src="http://sergio-blog.qiniudn.com/ipc_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
+<p>程序运行结果如下:<br><img src="http://sergio-blog.qiniudn.com/ipc_instance.png?imageMogr/auto-orient/thumbnail/686/quality/100/format/PNG" alt=""></p>
 
       
     </div>
@@ -832,10 +653,27 @@ have fun !
         
   
   <div class="tags">
-    <a href="/tags/c-1/">c</a>, <a href="/tags/IPC/">IPC</a>, <a href="/tags/Process-Comunication/">Process Comunication</a>, <a href="/tags/linux/">linux</a>
+    <a href="/tags/c/">c</a>, <a href="/tags/IPC/">IPC</a>, <a href="/tags/Process Comunication/">Process Comunication</a>, <a href="/tags/linux/">linux</a>
   </div>
 
         
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
       
       <div class="clearfix"></div>
     </footer>
@@ -888,21 +726,21 @@ have fun !
   
     <li><a href="/tags/IPC/">IPC</a><small>1</small></li>
   
-    <li><a href="/tags/Mac-OS-X/">Mac OS X</a><small>1</small></li>
+    <li><a href="/tags/Mac OS X/">Mac OS X</a><small>1</small></li>
   
-    <li><a href="/tags/Process-Comunication/">Process Comunication</a><small>1</small></li>
+    <li><a href="/tags/Process Comunication/">Process Comunication</a><small>1</small></li>
   
     <li><a href="/tags/apple/">apple</a><small>1</small></li>
   
     <li><a href="/tags/blog/">blog</a><small>1</small></li>
   
-    <li><a href="/tags/c-1/">c</a><small>1</small></li>
+    <li><a href="/tags/c/">c</a><small>1</small></li>
   
     <li><a href="/tags/creative/">creative</a><small>1</small></li>
   
     <li><a href="/tags/diff/">diff</a><small>1</small></li>
   
-    <li><a href="/tags/github-page/">github page</a><small>1</small></li>
+    <li><a href="/tags/github page/">github page</a><small>1</small></li>
   
     <li><a href="/tags/incapsula/">incapsula</a><small>1</small></li>
   
@@ -955,24 +793,6 @@ have fun !
   </ul>
 </div>
 
-
-  
-
-
-  <div class="widget music">
-  <h3 class="title">Favorite Albums</h3>
-  <br>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2392825603/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://mikecavanaugh.bandcamp.com/album/lovely-lonely-place">Lovely Lonely Place by Mike Cavanaugh</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2402931004/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://locirecords.bandcamp.com/album/dusk-to-dawn">Dusk to Dawn by Emancipator</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2161956980/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://lullatone.bandcamp.com/album/soundtracks-for-everyday-adventures">Soundtracks for Everyday Adventures by Lullatone</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2075294543/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://thepaperbacks.bandcamp.com/album/an-illusion-against-death">An Illusion Against Death by The Paperbacks</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=1034625230/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://ohdaughter.bandcamp.com/album/his-young-heart-ep">His Young Heart EP by Daughter</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=1101947474/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://emancipator.bandcamp.com/album/safe-in-the-steep-cliffs">safe in the steep cliffs by emancipator</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=96728/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://fabriziopaterlinirecords.com/album/now">Now by Fabrizio Paterlini</a></iframe>
-  <embed src="http://www.xiami.com/widget/17965432_23090057_270_270_cccccc_dddddd_1/collectPlayer.swf" type="application/x-shockwave-flash" width="270" height="270" wmode="opaque"></embed>
-  
-</div>
-
 </aside>
     <div class="clearfix"></div>
   </div>
@@ -982,7 +802,8 @@ have fun !
   
 </div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
 

@@ -18,46 +18,21 @@
     <meta property="og:image" content="undefined"/>
   
 
-  <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="http://feed.feedsky.com/DETACHMENT" title="CRESCENDO" type="application/atom+xml">
-  <link href='http://use.typekit.com/k/cjo5ipu-d.css?3bb2a6e53c9684ffdc9a9afe135b2a62d0c5cfebd5c62bc6cb59539a88d90df86f6b7cfa4efcadb00f2e0dff521f858aded36867d22a1a3027d665f67a29023f0561fa926e1efcbe8db69cffaff61d25522426f3929e634c99' rel='stylesheet' type='text/css'>
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="CRESCENDO" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   
-<!-- Start of BAIDU Code -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?9a777bb97d68d5027d70fc3873ea81f3";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- End of BAIDU Code -->
-<!-- Start of Woopra Code -->
-<script>
-(function(){
-var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-})("woopra");
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-42893624-1']);
+  _gaq.push(['_trackPageview']);
 
-woopra.config({
-    domain: 'shujian.me',
-    idle_timeout: 1800000
-});
-woopra.track();
-</script>
-<!-- End of Woopra Code -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42893624-1', 'shujian.me');
-  ga('send', 'pageview');
-
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 </script>
 
 </head>
@@ -97,11 +72,9 @@ woopra.track();
     <div class="entry">
       
         <blockquote>
-<p>风格是从伟大事物中萃取出的美好事物。 ---  Bozhidar Batsov</p>
+<p>风格是从伟大事物中萃取出的美好事物。 —-  Bozhidar Batsov</p>
 </blockquote>
-<p>最近开始学习ruby on rails，网上一搜发现ruby现在最新是2.0，rails是4.0rc，废话不多说，开始搭环境。<br>个人环境:<code>linuxmint 15</code>，安装过程遵循一下步骤:<br>1. 安装<code>RVM</code>
-2. 安装<code>Ruby2.0</code>
-3. 通过<code>Gem</code>安装<code>Rails4.0rc</code></p>
+<p>最近开始学习ruby on rails，网上一搜发现ruby现在最新是2.0，rails是4.0rc，废话不多说，开始搭环境。<br>个人环境:<code>linuxmint 15</code>，安装过程遵循一下步骤:<br>1. 安装<code>RVM</code><br>2. 安装<code>Ruby2.0</code><br>3. 通过<code>Gem</code>安装<code>Rails4.0rc</code></p>
 <h2>RVM</h2>
 <figure class="highlight lang-bash"><table><tr><td class="gutter"><pre>1
 2
@@ -143,7 +116,7 @@ $ source ~/.bash_profile
 <ul>
 <li>查询已经安装的ruby</li>
 </ul>
-<p><a name="more"></a></p>
+<p><a id="more"></a></p>
 <figure class="highlight lang-bash"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre>rvm list
 </pre></td></tr></table></figure>
@@ -210,6 +183,23 @@ $ source ~/.bash_profile
   </div>
 
         
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
       
       <div class="clearfix"></div>
     </footer>
@@ -262,21 +252,21 @@ $ source ~/.bash_profile
   
     <li><a href="/tags/IPC/">IPC</a><small>1</small></li>
   
-    <li><a href="/tags/Mac-OS-X/">Mac OS X</a><small>1</small></li>
+    <li><a href="/tags/Mac OS X/">Mac OS X</a><small>1</small></li>
   
-    <li><a href="/tags/Process-Comunication/">Process Comunication</a><small>1</small></li>
+    <li><a href="/tags/Process Comunication/">Process Comunication</a><small>1</small></li>
   
     <li><a href="/tags/apple/">apple</a><small>1</small></li>
   
     <li><a href="/tags/blog/">blog</a><small>1</small></li>
   
-    <li><a href="/tags/c-1/">c</a><small>1</small></li>
+    <li><a href="/tags/c/">c</a><small>1</small></li>
   
     <li><a href="/tags/creative/">creative</a><small>1</small></li>
   
     <li><a href="/tags/diff/">diff</a><small>1</small></li>
   
-    <li><a href="/tags/github-page/">github page</a><small>1</small></li>
+    <li><a href="/tags/github page/">github page</a><small>1</small></li>
   
     <li><a href="/tags/incapsula/">incapsula</a><small>1</small></li>
   
@@ -329,24 +319,6 @@ $ source ~/.bash_profile
   </ul>
 </div>
 
-
-  
-
-
-  <div class="widget music">
-  <h3 class="title">Favorite Albums</h3>
-  <br>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2392825603/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://mikecavanaugh.bandcamp.com/album/lovely-lonely-place">Lovely Lonely Place by Mike Cavanaugh</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2402931004/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://locirecords.bandcamp.com/album/dusk-to-dawn">Dusk to Dawn by Emancipator</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2161956980/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://lullatone.bandcamp.com/album/soundtracks-for-everyday-adventures">Soundtracks for Everyday Adventures by Lullatone</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=2075294543/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://thepaperbacks.bandcamp.com/album/an-illusion-against-death">An Illusion Against Death by The Paperbacks</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=1034625230/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://ohdaughter.bandcamp.com/album/his-young-heart-ep">His Young Heart EP by Daughter</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=1101947474/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://emancipator.bandcamp.com/album/safe-in-the-steep-cliffs">safe in the steep cliffs by emancipator</a></iframe>
-  <iframe style="border: 0; width: 270px; height: 270px;" src="http://bandcamp.com/EmbeddedPlayer/album=96728/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="http://fabriziopaterlinirecords.com/album/now">Now by Fabrizio Paterlini</a></iframe>
-  <embed src="http://www.xiami.com/widget/17965432_23090057_270_270_cccccc_dddddd_1/collectPlayer.swf" type="application/x-shockwave-flash" width="270" height="270" wmode="opaque"></embed>
-  
-</div>
-
 </aside>
     <div class="clearfix"></div>
   </div>
@@ -356,7 +328,8 @@ $ source ~/.bash_profile
   
 </div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
 
