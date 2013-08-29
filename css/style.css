@@ -121,12 +121,6 @@ footer {
   border-top: 1px solid #808080;
   padding-top: 10px;
 }
-.categories a {
-  border: 1px solid #808080;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  padding: 2px 2px 2px 2px;
-}
 article {
   padding: 15px 30px;
   font-size: 15px;
@@ -473,9 +467,15 @@ article .entry .tags:before {
   font: 1.1em FontAwesome;
 }
 article .entry .categories:before {
-  content: '\f07b';
+  content: 'categories: ';
   top: 4px;
   left: 1px;
+}
+article .entry .categories a {
+  border: 1px solid #808080;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 2px 2px 2px 2px;
 }
 article .entry .tags:before {
   content: '\f02b';
@@ -500,6 +500,12 @@ article .entry .tags:before {
   background: #069;
   color: #fff;
   text-decoration: none;
+}
+#pagination a:hover {
+  -webkit-transform: rotate(0deg) scale(1.1);
+  -moz-transform: rotate(0deg) scale(1.1);
+  -o-transform: rotate(0deg) scale(1.1);
+  -transform: rotate(0deg) scale(1.1);
 }
 #pagination .prev {
   float: left;
