@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<!--
+	Striped 2.5 by HTML5 Up!
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Ported to Hexo by Adam Stokes @ajscg
+-->
+<html>
+  <head>
+  <meta charset="utf-8">
+  
+  <title>基于webrtc构建跨平台视频聊天室的阶段研究 | CRESCENDO</title>
+  <meta name="author" content="Shukri Chiu">
+  
+  <meta name="description" content="如果有一天就这么死了，也许这里还活着。用Blog记录生活的点点滴滴，在这个信息时代留下点东西。不知道未来会发生些什么，总是要学会去坦然面对一切。">
+  
+  <meta name="keywords" content="webrtc,视频聊天室">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="基于webrtc构建跨平台视频聊天室的阶段研究"/>
+  <meta property="og:site_name" content="CRESCENDO"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/skel-panels.min.js"></script>
+  <script src="/js/init.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/skel-noscript.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style-desktop.css" />
+    <link rel="stylesheet" href="/css/style-wide.css" />
+  </noscript>
+
+  <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+  <!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+  <link rel="alternate" href="/atom.xml" title="CRESCENDO" type="application/atom+xml">
+  <link rel="stylesheet" href="/js/styles/tomorrow-night.css" />
+  <script src="/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  
+
+  </head>
+
+
+
+<body class="left-sidebar">
+  <!-- Wrapper -->
+  <div id="wrapper">
+    <!-- Content -->
+    <div id="content">
+      <div id="content-inner">
+	<!-- Post -->
+<article class="is-post is-post-excerpt">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h2>基于webrtc构建跨平台视频聊天室的阶段研究</h2>
+  
+
+
+    </header>
+  <div class="info">
+    <!--
+	Note: The date should be formatted exactly as it's shown below. In particular, the
+	"least significant" characters of the month should be encapsulated in a <span>
+	element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
+	Oh, and if you don't need a date for a particular page or post you can simply delete
+	the entire "date" element.
+	
+      -->
+    <span class="date"><span class="month">Dec</span> <span class="day">17</span><span class="year">, 2012</span></span>
+    <!--
+	Note: You can change the number of list items in "stats" to whatever you want.
+      -->
+
+    <ul class="stats">
+      
+  <div class="addthis addthis_toolbox addthis_default_style">
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+
+      <!--
+      <li><a href="#" class="fa fa-comment">16</a></li>
+      <li><a href="#" class="fa fa-heart">32</a></li>
+      <li><a href="#" class="fa fa-twitter">64</a></li>
+      <li><a href="#" class="fa fa-facebook">128</a></li>
+      -->
+    </ul>
+
+  </div>
+  <div class="entry">
+  
+    <blockquote>
+<p>WebRTC is a free, open project that enables web browsers with Real-Time Communications (RTC) capabilities via simple Javascript APIs. The WebRTC components have been optimized to best serve this purpose. </p>
+</blockquote>
+<h2 id="-">简介</h2>
+<p>由于计算机网络课程设计以及参加一个相关编程比赛的需要，本人尝试利用websocket和webrtc技术搭建一个跨平台的实时视频聊天室,<a href="https://github.com/zsj2145676/webrtc.chatdemo" target="_blank">项目地址在此</a></p>
+<h2 id="-">问题</h2>
+<p>项目采用热门的nodejs开发，参考了webrtc.io的lib库，实际使用的时候需要将Chatlib.js和client.js的host地址统一到本机的ip地址。但是在尝试开发pc与mobile的视频聊天的时候出现了一些问题(本人pc用的linux chrome 25,mobile终端用的ipad2).</p>
+<ul>
+<li>移动终端的浏览器不支持webrtc</li>
+<li>sony ericsson出了一款支持webrtc的浏览器bowser，但是我的代码拿不到peerconnection，基于其官方sample code修改之后也拿不到</li>
+<li>chrome和ericsson的webkit标准不同，其video标签的标准也不同（h.264和vp8）</li>
+</ul>
+<p><a id="more"></a></p>
+<h2 id="-">总结</h2>
+<p>webrtc的潜力还是非常巨大，从Google、Mozilla、Sony Ericsson等巨头的纷纷加入就可以看出来，但是现在的开发者社区还不够活跃，而且在瓷器国并且处于pptp被封杀的情况下，twitter、youtube、google group等非常有用的资源并不容易获得，进一步加大了国人参与webrtc开发的难度。现在只能持续关注webrtc，其标准还相当不稳定。</p>
+<h2 id="-">参考文献</h2>
+<ul>
+<li><a href="https://labs.ericsson.com/apps/bowser/sample-code" target="_blank">Sony Ericsson Labs Sample code</a>  </li>
+<li><a href="http://flashphoner.com/html5-webrtc-phone-not-yet" target="_blank">HTML5-WebRTC phone? Not yet.</a> </li>
+<li><a href="http://www.programmer.com.cn/4239/" target="_blank">VP8的前途与使命</a></li>
+</ul>
+
+  
+  </div>
+  <footer>
+    
+      
+  
+  <div class="categories">
+    <a href="/categories/Techniques/">Techniques</a>
+  </div>
+
+
+      
+
+      
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+
+    
+  </footer>
+</article>
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+
+
+
+      </div>
+    </div>
+    <div id="sidebar">
+  <!-- Logo -->
+  <div id="logo">
+    <h1>CRESCENDO</h1>
+    <h2>人生如歌，或淡入，或渐强</h2>
+  </div>
+  
+  <!-- Nav -->
+  <nav id="nav">
+    <ul>
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/archives">Archives</a></li>
+      
+    </ul>
+  </nav>
+
+
+  <!-- Hexo Widgets -->
+  
+    <!-- Search -->
+<section class="is-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" class="text" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.shujian.me">
+  </form>
+</section>
+
+  
+    
+<section class="is-recent-posts">
+  <h2>Recent Posts</h2>
+  <ul>
+    
+      <li>
+        <a href="/2013/09/01/wait/">候机有感</a>
+      </li>
+    
+      <li>
+        <a href="/2013/08/30/newszeit/">Newszeit -- Google Reader 替代品评测(一)</a>
+      </li>
+    
+      <li>
+        <a href="/2013/08/18/yet-another-month-in-beijing/">yet another month in beijing</a>
+      </li>
+    
+      <li>
+        <a href="/2013/07/22/behance/">Behance -- 创意人士高效工作十法则</a>
+      </li>
+    
+      <li>
+        <a href="/2013/06/26/annoyer/">是厌恶</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+  
+
+  <!-- Copyright -->
+  <div id="copyright">
+  
+  &copy; 2014 Shukri Chiu
+  
+  Powered by: <a href="https://github.com/tommy351/hexo">Hexo</a><br />
+  Designed by: <a href="http://html5up.net/">HTML5 UP</a>
+  <p>
+    
+    
+    
+
+   </p>
+</div>
+
+
+
+</div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'shukrichiu';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+  </div>
+</body>
+</html>
