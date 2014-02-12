@@ -3,7 +3,7 @@
   <title><![CDATA[CRESCENDO]]></title>
   <link href="http://blog.shujian.me/atom.xml" rel="self"/>
   <link href="http://blog.shujian.me"/>
-  <updated>2014-02-12T18:43:53.034Z</updated>
+  <updated>2014-02-12T22:25:30.503Z</updated>
   <id>http://blog.shujian.me/</id>
   <author>
     <name><![CDATA[Shukri Chiu]]></name>
@@ -1124,6 +1124,35 @@ $ <span class="built_in">source</span> ~/.bash_profile
     <category scheme="http://blog.shujian.me/categories/Techniques/" term="Techniques"/>
   </entry>
   <entry>
+    <title type="html"><![CDATA[动态规划在unix diff的下的使用]]></title>
+    <link href="http://blog.shujian.me/2012/11/20/dp-in-unix-diff/"/>
+    <id>http://blog.shujian.me/2012/11/20/dp-in-unix-diff/</id>
+    <published>2012-11-21T00:00:00.000Z</published>
+    <updated>2013-08-29T14:47:48.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>In computing, diff is a file comparison utility that outputs the differences between two files. It is typically used to show the changes between one version of a file and a former version of the same file. Diff displays the changes made per line for text files.</p>
+</blockquote>
+<h2 id="-">简介</h2>
+<p>通常情况下diff和patch一起使用，linux中的源代码补丁都是通过diff和patch的配合制作出来的。diff在比较两个文本文件的不同方面很高效，它是基于行的，diff会将两个文件都按照行分成若干部分，然后计算这些行每一行的校验码（最原始的做法是把每一行当成一个字符，但是空间复杂度会比较大，现在的做法是把每一行文本通过hash算法产生一个值，那么文本行的比较就变成了比较hash值，还用一个bit位贮存中间结果，把空间占有率减少到传统做法的1/8，但是算法时间复杂度依然是O(m*n)，没有决定性的提高），之后的问题就是比较这两个文件的所有行的校验码序列的不同了，这就把问题归结为了序列比对（or LCS）的问题。diff用的是动态规划算法，动态规划和贪心算法相似，但是其思想却是相反的，贪心算法保证每一步都是最小代价的，但是不能保证最终代价最小，而动态规划每一步什么也不知道，它从起点开始，只管局部地按照要求将无所谓的结果铺满全局，然后回溯，在这些繁复的数据之间找到一条从开始到最后的一条路径，为何这条路径就是结果呢？因为每一步都符合要求，所以无论如何最终随便一条按照要求的回溯路线都符合要求，可是可以看出，这条回溯路线的结果是一个正确结果但是却不是唯一的结果，正所谓条条大道通罗马。和贪心算法一样，随便的一条回溯路线不一定是最佳的，寻找最佳结果还要靠别的机制，贪心算法比动态规划好的就是靠近最佳结果的几率更大些，而动态规划只是一个结果，它旨在找到一种方案，然而动态规划有自己的优势，就是如果你的模型建的好，那么它可以在每一步很轻松的情况下达到同样的效果，关键就是建模。</p>
+<h2 id="-">具体实现</h2>
+<p>英文版的详细实现过程在<a href="http://www.avatar.se/molbioinfo2001/dynprog/dynamic.html" target="_blank">Dynamic Programming</a>,其中有一点点小错误，但是不影响阅读。同时也可以阅读算法导论15.4最长公共子序列一章。前面已经说明diff算法把2个文件的行分别依次解析为两个校验码序列，形成一个(M+1)行(N+1)列的矩阵，然后引出一条蛇，蛇头勇往直前，呵呵，其实就是往矩阵里面的元素里填数字，从(0,0)一直到(M+1,N+1)的大方向填数字，保证所填的数字单调增长，也就是填入的数字不能比它的参照值小，将要填入的是Vi,j,那么它的参照值就是Vi-1,j-1，Vi-1,j和Vi,j-1，具体怎么做到呢？V值的增加只有一种可能性就是在Pi和Qj相等的情况下，其它情况下都是不增加的，所以Vi,j的值就是三者中最大的，Vi,j的参考值不是有三个吗？那么这种增加的情况和哪个参考值有关联呢？事实上是和对角的那个，也就是和Vi-1,j-1,仔细想一下，只有i和j同步增长才是P和Q的同步推进引起的比较，i和j的单独推进只是P序列或者Q序列的单独向前推进，也就是说在序列比对的时候就是一个gap，这种方式填表很简单，只要有左上，上，左三个值就可以求出当前的这个值，每一步都是那么的局部，最终填完后，找到最大的这个值的位置，很显然是最右下角的这个，然后回溯，怎么回溯呢？一个一个的找到当前值的前驱值所在的位置就可以了，最后将回溯的道路进行标注，得到了P和Q的两条路径，每写一个字符，如果路径和字符序列的方向垂直，那么就写一个空格，最终的结果就是diff的结果，很巧妙吧。不过以上的方式回溯写出来的路径不止一条，每一条路径都是一个结果。
+<a id="more"></a></p>
+<h2 id="-">总结</h2>
+<p>动态规划相比贪心都是局部的对既定规律的模仿，但是在diff中动态规划的算法部分并没有跟全局联系起来，直到完成了整个矩阵的填充过程才在回溯的时候和全局联系起来找到一条结果，但是不一定是最优的结果，贪心算法则一直显的很努力，每一步都想要靠近最优的结果。</p>
+<h2 id="-">参考文献</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Diff" target="_blank">diff</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Diff3" target="_blank">diff3</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem" target="_blank">Longest common subsequence problem</a></li>
+<li><a href="http://www.linuxsky.org/doc/admin/200712/213.html" target="_blank">diff和patch使用指南</a></li>
+<li><a href="http://binfo.ym.edu.tw/emboss/Apps/diffseq.html" target="_blank">EMBOSS:diffseq</a></li>
+<li><a href="http://networking.ctocio.com.cn/289/12393789.shtml" target="_blank">diff指令</a></li>
+<li><a href="http://www.avatar.se/molbioinfo2001/dynprog/adv_dynamic.html" target="_blank">Advanced Dynamic Programming Tutorial</a></li>
+</ul>
+]]></content>
+    <category scheme="http://blog.shujian.me/categories/Algorithm/" term="Algorithm"/>
+  </entry>
+  <entry>
     <title type="html"><![CDATA[「算法导论」第9章中位数和顺序统计学的分析与其C语言的实现]]></title>
     <link href="http://blog.shujian.me/2012/11/20/find-the-kth-large/"/>
     <id>http://blog.shujian.me/2012/11/20/find-the-kth-large/</id>
@@ -1632,35 +1661,6 @@ $ <span class="built_in">source</span> ~/.bash_profile
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/Selection_algorithm" target="_blank">Selection algorithm</a></li>
 <li><a href="http://www.cnblogs.com/zhjp11/archive/2010/02/26/1674227.html" target="_blank">寻找第K大的数的方法总结</a></li>
-</ul>
-]]></content>
-    <category scheme="http://blog.shujian.me/categories/Algorithm/" term="Algorithm"/>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[动态规划在unix diff的下的使用]]></title>
-    <link href="http://blog.shujian.me/2012/11/20/dp-in-unix-diff/"/>
-    <id>http://blog.shujian.me/2012/11/20/dp-in-unix-diff/</id>
-    <published>2012-11-21T00:00:00.000Z</published>
-    <updated>2013-08-29T14:47:48.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>In computing, diff is a file comparison utility that outputs the differences between two files. It is typically used to show the changes between one version of a file and a former version of the same file. Diff displays the changes made per line for text files.</p>
-</blockquote>
-<h2 id="-">简介</h2>
-<p>通常情况下diff和patch一起使用，linux中的源代码补丁都是通过diff和patch的配合制作出来的。diff在比较两个文本文件的不同方面很高效，它是基于行的，diff会将两个文件都按照行分成若干部分，然后计算这些行每一行的校验码（最原始的做法是把每一行当成一个字符，但是空间复杂度会比较大，现在的做法是把每一行文本通过hash算法产生一个值，那么文本行的比较就变成了比较hash值，还用一个bit位贮存中间结果，把空间占有率减少到传统做法的1/8，但是算法时间复杂度依然是O(m*n)，没有决定性的提高），之后的问题就是比较这两个文件的所有行的校验码序列的不同了，这就把问题归结为了序列比对（or LCS）的问题。diff用的是动态规划算法，动态规划和贪心算法相似，但是其思想却是相反的，贪心算法保证每一步都是最小代价的，但是不能保证最终代价最小，而动态规划每一步什么也不知道，它从起点开始，只管局部地按照要求将无所谓的结果铺满全局，然后回溯，在这些繁复的数据之间找到一条从开始到最后的一条路径，为何这条路径就是结果呢？因为每一步都符合要求，所以无论如何最终随便一条按照要求的回溯路线都符合要求，可是可以看出，这条回溯路线的结果是一个正确结果但是却不是唯一的结果，正所谓条条大道通罗马。和贪心算法一样，随便的一条回溯路线不一定是最佳的，寻找最佳结果还要靠别的机制，贪心算法比动态规划好的就是靠近最佳结果的几率更大些，而动态规划只是一个结果，它旨在找到一种方案，然而动态规划有自己的优势，就是如果你的模型建的好，那么它可以在每一步很轻松的情况下达到同样的效果，关键就是建模。</p>
-<h2 id="-">具体实现</h2>
-<p>英文版的详细实现过程在<a href="http://www.avatar.se/molbioinfo2001/dynprog/dynamic.html" target="_blank">Dynamic Programming</a>,其中有一点点小错误，但是不影响阅读。同时也可以阅读算法导论15.4最长公共子序列一章。前面已经说明diff算法把2个文件的行分别依次解析为两个校验码序列，形成一个(M+1)行(N+1)列的矩阵，然后引出一条蛇，蛇头勇往直前，呵呵，其实就是往矩阵里面的元素里填数字，从(0,0)一直到(M+1,N+1)的大方向填数字，保证所填的数字单调增长，也就是填入的数字不能比它的参照值小，将要填入的是Vi,j,那么它的参照值就是Vi-1,j-1，Vi-1,j和Vi,j-1，具体怎么做到呢？V值的增加只有一种可能性就是在Pi和Qj相等的情况下，其它情况下都是不增加的，所以Vi,j的值就是三者中最大的，Vi,j的参考值不是有三个吗？那么这种增加的情况和哪个参考值有关联呢？事实上是和对角的那个，也就是和Vi-1,j-1,仔细想一下，只有i和j同步增长才是P和Q的同步推进引起的比较，i和j的单独推进只是P序列或者Q序列的单独向前推进，也就是说在序列比对的时候就是一个gap，这种方式填表很简单，只要有左上，上，左三个值就可以求出当前的这个值，每一步都是那么的局部，最终填完后，找到最大的这个值的位置，很显然是最右下角的这个，然后回溯，怎么回溯呢？一个一个的找到当前值的前驱值所在的位置就可以了，最后将回溯的道路进行标注，得到了P和Q的两条路径，每写一个字符，如果路径和字符序列的方向垂直，那么就写一个空格，最终的结果就是diff的结果，很巧妙吧。不过以上的方式回溯写出来的路径不止一条，每一条路径都是一个结果。
-<a id="more"></a></p>
-<h2 id="-">总结</h2>
-<p>动态规划相比贪心都是局部的对既定规律的模仿，但是在diff中动态规划的算法部分并没有跟全局联系起来，直到完成了整个矩阵的填充过程才在回溯的时候和全局联系起来找到一条结果，但是不一定是最优的结果，贪心算法则一直显的很努力，每一步都想要靠近最优的结果。</p>
-<h2 id="-">参考文献</h2>
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Diff" target="_blank">diff</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Diff3" target="_blank">diff3</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem" target="_blank">Longest common subsequence problem</a></li>
-<li><a href="http://www.linuxsky.org/doc/admin/200712/213.html" target="_blank">diff和patch使用指南</a></li>
-<li><a href="http://binfo.ym.edu.tw/emboss/Apps/diffseq.html" target="_blank">EMBOSS:diffseq</a></li>
-<li><a href="http://networking.ctocio.com.cn/289/12393789.shtml" target="_blank">diff指令</a></li>
-<li><a href="http://www.avatar.se/molbioinfo2001/dynprog/adv_dynamic.html" target="_blank">Advanced Dynamic Programming Tutorial</a></li>
 </ul>
 ]]></content>
     <category scheme="http://blog.shujian.me/categories/Algorithm/" term="Algorithm"/>
